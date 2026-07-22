@@ -36,4 +36,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist/base-ui-free-dashboard/browser --project-name=base-ui-free-dashboard
+          command: pages deploy dist/base-ui-free-dashboard/browser --project-name=base-ui-free-dashboard-demo

@@ -1,4 +1,4 @@
 # Cloudflare Pages — https://developers.cloudflare.com/pages/
-name = "base-ui-free-dashboard"
+name = "base-ui-free-dashboard-demo"
 compatibility_date = "2026-07-22"
 pages_build_output_dir = "./dist/base-ui-free-dashboard/browser"

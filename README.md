@@ -79,7 +79,7 @@ The demo is set up for [Cloudflare Pages](https://pages.cloudflare.com/) with SP
 4. Deploy. Cloudflare will rebuild on every push to `main`.
 5. Optional: attach a custom domain under the project’s **Custom domains** tab.
 
-After the first deploy you get a URL like `https://base-ui-free-dashboard.pages.dev`.
+After the first deploy you get a URL like `https://base-ui-free-dashboard-demo.pages.dev`.
 
 ### Option B — GitHub Actions
 
@@ -89,7 +89,7 @@ A workflow is included at `.github/workflows/deploy-cloudflare.yml`.
 2. In the GitHub repo → **Settings → Secrets and variables → Actions**, add:
    - `CLOUDFLARE_API_TOKEN`
    - `CLOUDFLARE_ACCOUNT_ID` (from the Workers & Pages overview sidebar)
-3. Create the Pages project once (Option A, or `npx wrangler pages project create base-ui-free-dashboard`).
+3. Create the Pages project once (Option A, or `npx wrangler pages project create base-ui-free-dashboard-demo`).
 4. Push to `main` (or run the workflow manually).
 
 ### Option C — Deploy from your machine
