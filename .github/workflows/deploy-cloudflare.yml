@@ -16,6 +16,22 @@ jobs:
       contents: read
       deployments: write
     steps:
+      - name: Check secrets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          missing=0
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::Missing secret CLOUDFLARE_API_TOKEN. Create a Cloudflare API token with Account → Cloudflare Pages → Edit, then run: gh secret set CLOUDFLARE_API_TOKEN"
+            missing=1
+          fi
+          if [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::error::Missing secret CLOUDFLARE_ACCOUNT_ID"
+            missing=1
+          fi
+          exit $missing
+
       - name: Checkout
         uses: actions/checkout@v4
 
