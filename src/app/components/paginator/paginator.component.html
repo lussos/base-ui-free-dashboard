@@ -1,0 +1,72 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+@if (basePaginator()) {
+<div class="flex justify-start sm:justify-between items-center gap-4">
+  <base-select class="w-20" [ngModel]="itemsPerPage() !== null ? itemsPerPage() : pageSizeOptions()[0]">
+    @for (option of pageSizeOptions(); track option) {
+    <option [value]="option">{{ option }}</option>
+    }
+  </base-select>
+
+  <div class="flex items-center gap-4">
+    <div class="flex items-center gap-2">
+      <p class="hidden sm:block text-xs text-slate-500 dark:text-slate-400 whitespace-nowrap">Go to page</p>
+      <base-input-spinner class="w-24"></base-input-spinner>
+    </div>
+    <div class="flex items-center gap-2">
+      <button base-icon-button color="transparent" size="sm" (click)="decrease()" title="Previous">
+        <base-icon name="chevron-left" class="stroke-blue-600"></base-icon>
+      </button>
+      <p class="text-xs font-medium dark:text-slate-300">{{start}} of {{end}}</p>
+      <button base-icon-button color="transparent" size="sm" (click)="increase()" title="Next">
+        <base-icon name="chevron-right" class="stroke-blue-600"></base-icon>
+      </button>
+    </div>
+  </div>
+</div>
+}
+
+<div class="flex justify-center not-prose">
+  @if (!basePaginator()) {
+  <nav aria-label="Page navigation">
+    <ul class="flex items-center">
+      @if (!arrows()) {
+      <li>
+        <button type="button"
+          class="h-9 px-3 flex items-center justify-center border border-slate-300 dark:border-slate-600 text-sm rounded-l-xl hover:bg-slate-50 dark:hover:bg-slate-800 dark:text-slate-300 transition-colors"
+          aria-label="Previous page">Previous</button>
+      </li>
+      } @else {
+      <li>
+        <button type="button"
+          class="h-9 w-9 flex items-center justify-center border border-slate-300 dark:border-slate-600 rounded-l-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          aria-label="Previous page">
+          <base-icon name="chevron-left" class="stroke-slate-800 dark:stroke-slate-100 w-4 h-4" aria-hidden="true"></base-icon>
+        </button>
+      </li>
+      }
+
+      <ng-content select="base-p-page"></ng-content>
+
+      @if (arrows()) {
+      <li>
+        <button type="button"
+          class="h-9 w-9 flex items-center justify-center border border-slate-300 dark:border-slate-600 rounded-r-xl -ml-px hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+          aria-label="Next page">
+          <base-icon name="chevron-right" class="stroke-slate-800 dark:stroke-slate-100 w-4 h-4" aria-hidden="true"></base-icon>
+        </button>
+      </li>
+      } @else {
+      <li>
+        <button type="button"
+          class="h-9 px-3 flex items-center justify-center border border-slate-300 dark:border-slate-600 text-sm rounded-r-xl -ml-px hover:bg-slate-50 dark:hover:bg-slate-800 dark:text-slate-300 transition-colors"
+          aria-label="Next page">Next</button>
+      </li>
+      }
+    </ul>
+  </nav>
+  }
+</div>

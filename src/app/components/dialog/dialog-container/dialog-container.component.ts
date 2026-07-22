@@ -1,0 +1,102 @@
+// Base UI (free tier) — https://base-ui.net
+// Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+// Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  HostListener,
+  OnDestroy,
+  viewChild,
+  ViewContainerRef,
+  inject,
+  ChangeDetectionStrategy,
+} from '@angular/core';
+
+import { animate, style, transition, trigger, animateChild, query } from '@angular/animations';
+import { FocusTrap, FocusTrapFactory } from '@angular/cdk/a11y';
+import { DialogContainer } from '../dialog-container';
+import { DialogContext } from '../dialog-context';
+
+let dialogLabelIdCounter = 0;
+
+/**
+ * Internal container component that renders the dialog overlay and handles click-outside behavior.
+ * Created dynamically by `DialogService`.
+ */
+@Component({
+  selector: 'base-dialog-container',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [],
+  templateUrl: './dialog-container.component.html',
+  animations: [
+    trigger('host', [
+      transition(':leave', [query('@backdrop,@box', [animateChild()], { optional: true })]),
+      transition(':enter', [query('@backdrop,@box', [animateChild()], { optional: true })]),
+    ]),
+    trigger('box', [
+      transition(':enter', [
+        style({ transform: 'scale(0.5)', opacity: 0 }),
+        animate('200ms ease-out', style({ transform: 'scale(1.05)', opacity: 1 })),
+        animate('100ms ease-out', style({ transform: 'scale(1)' })),
+      ]),
+      transition(':leave', [
+        animate('100ms ease-in', style({ transform: 'scale(1.05)' })),
+        animate('200ms ease-in', style({ transform: 'scale(0.5)', opacity: 0 })),
+      ]),
+    ]),
+    trigger('backdrop', [
+      transition(':enter', [style({ opacity: 0 }), animate('230ms ease-in', style({ opacity: 1 }))]),
+      transition(':leave', [animate('230ms ease-out', style({ opacity: 0 }))]),
+    ]),
+  ],
+  host: { '[@host]': 'true' },
+})
+export class DialogContainerComponent implements DialogContainer, AfterViewInit, OnDestroy {
+  className = '';
+
+  readonly container = viewChild.required('container', { read: ViewContainerRef });
+  readonly dialogBox = viewChild<ElementRef<HTMLElement>>('dialogBox');
+
+  context!: DialogContext<unknown, unknown>;
+
+  readonly dialogLabelId = `base-dialog-label-${dialogLabelIdCounter++}`;
+
+  private focusTrap?: FocusTrap;
+  private previouslyFocused: HTMLElement | null = null;
+  private elementRef = inject<ElementRef<HTMLElement>>(ElementRef);
+  private focusTrapFactory = inject(FocusTrapFactory);
+
+  ngAfterViewInit(): void {
+    this.previouslyFocused = document.activeElement as HTMLElement | null;
+    this.focusTrap = this.focusTrapFactory.create(this.elementRef.nativeElement);
+    this.focusTrap.focusInitialElementWhenReady();
+    this.applyDialogLabelling();
+  }
+
+  ngOnDestroy(): void {
+    this.focusTrap?.destroy();
+    this.previouslyFocused?.focus();
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscape(): void {
+    this.context?.close();
+  }
+
+  private applyDialogLabelling(): void {
+    const box = this.dialogBox()?.nativeElement;
+    if (!box) return;
+
+    const heading = box.querySelector('h1, h2, h3, [base-dialog-header], base-dialog-header');
+    if (heading instanceof HTMLElement) {
+      if (!heading.id) {
+        heading.id = this.dialogLabelId;
+      }
+      box.setAttribute('aria-labelledby', heading.id);
+    } else {
+      box.setAttribute('aria-label', 'Dialog');
+    }
+  }
+}

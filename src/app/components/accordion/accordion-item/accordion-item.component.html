@@ -1,0 +1,18 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<button type="button" [id]="headerId" [class]="headerButtonClass()" [attr.aria-expanded]="isOpen()"
+  [attr.aria-controls]="panelId" [disabled]="disabled()" (click)="toggle()">
+  <h4 class="flex-1 !m-0 text-left">
+    <ng-content select="base-accordion-item-header"></ng-content>
+  </h4>
+  <base-icon [name]="!isOpen() ? 'chevron-down' : 'chevron-up'" aria-hidden="true"
+    class="w-4 h-4 min-w-4 stroke-slate-800 dark:stroke-slate-200"></base-icon>
+</button>
+<div #content [id]="panelId" class="not-prose transition-[max-height] duration-300 overflow-hidden"
+  role="region" [attr.aria-labelledby]="headerId"
+  [style.maxHeight.px]="isOpen() ? content.scrollHeight : 0">
+  <ng-content select="base-accordion-item-body"></ng-content>
+</div>

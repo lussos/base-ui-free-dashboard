@@ -1,0 +1,109 @@
+<div class="space-y-6">
+  <div>
+    <h2 class="text-lg font-semibold text-slate-900 dark:text-white">Account Settings</h2>
+    <p class="text-sm text-slate-500 dark:text-slate-400">
+      In-page sections use <code class="text-xs">base-sidenav</code> — not the app chrome shell.
+    </p>
+  </div>
+
+  <!-- Demo: base-sidenav is for in-page section navigation inside page content. -->
+  <base-sidenav
+    layout="auto"
+    class="min-h-[28rem] overflow-hidden rounded-xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-900 sm:min-h-[32rem]">
+    <base-sidenav-nav class="px-3">
+      <p class="mb-2 px-2 text-[10px] font-medium uppercase tracking-widest text-slate-400">Sections</p>
+      <base-nav-list ariaLabel="Settings sections">
+        <button
+          type="button"
+          base-list-item
+          class="gap-3 rounded-lg px-2"
+          [class.!text-blue-500]="section() === 'profile'"
+          (click)="selectSection('profile')">
+          <span class="flex items-center gap-3">
+            <base-icon name="user" class="w-4 h-4"></base-icon>
+            Profile
+          </span>
+        </button>
+        <button
+          type="button"
+          base-list-item
+          class="gap-3 rounded-lg px-2"
+          [class.!text-blue-500]="section() === 'billing'"
+          (click)="selectSection('billing')">
+          <span class="flex items-center gap-3">
+            <base-icon name="credit-card" class="w-4 h-4"></base-icon>
+            Billing
+          </span>
+        </button>
+        <button
+          type="button"
+          base-list-item
+          class="gap-3 rounded-lg px-2"
+          [class.!text-blue-500]="section() === 'notifications'"
+          (click)="selectSection('notifications')">
+          <span class="flex items-center gap-3">
+            <base-icon name="bell" class="w-4 h-4"></base-icon>
+            Notifications
+          </span>
+        </button>
+      </base-nav-list>
+    </base-sidenav-nav>
+
+    <base-sidenav-body class="bg-slate-50 p-4 dark:bg-slate-950 md:p-6">
+      @switch (section()) {
+        @case ('profile') {
+          <base-card class="max-w-3xl">
+            <base-card-body class="space-y-6 p-6">
+              <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+                <base-avatar
+                  size="lg"
+                  shape="circle"
+                  [initials]="name.slice(0, 2).toUpperCase()"
+                  status="active"></base-avatar>
+                <div>
+                  <p class="text-sm font-medium text-slate-900 dark:text-white">Profile photo</p>
+                  <!-- Want drag-and-drop avatar uploading with image cropping? Get the Pro file-upload and crop-image components. -->
+                  <p class="mt-1 text-xs text-slate-400">
+                    Want drag-and-drop avatar uploading with image cropping? Get the Pro
+                    <code class="text-[10px]">file-upload</code> and
+                    <code class="text-[10px]">crop-image</code> components.
+                  </p>
+                  <button type="button" base-button color="default" size="sm" class="mt-3">
+                    <base-icon name="camera" class="w-4 h-4"></base-icon>
+                    Change photo
+                  </button>
+                </div>
+              </div>
+
+              <form class="space-y-4" (ngSubmit)="saveProfile()">
+                <base-input-group>
+                  <base-label>Name</base-label>
+                  <input base-input name="name" [(ngModel)]="name" />
+                </base-input-group>
+                <base-input-group>
+                  <base-label>Email</base-label>
+                  <input base-input name="email" type="email" [(ngModel)]="email" />
+                </base-input-group>
+                <base-input-group>
+                  <base-label>Bio</base-label>
+                  <textarea base-textarea name="bio" rows="4" [(ngModel)]="bio"></textarea>
+                </base-input-group>
+                <button type="submit" base-button color="primary">Save profile</button>
+              </form>
+            </base-card-body>
+          </base-card>
+        }
+        @case ('billing') {
+          <div class="max-w-3xl">
+            <base-form-billing></base-form-billing>
+          </div>
+        }
+        @case ('notifications') {
+          <div class="max-w-3xl">
+            <base-form-notifications></base-form-notifications>
+          </div>
+        }
+      }
+    </base-sidenav-body>
+  </base-sidenav>
+</div>

@@ -1,0 +1,2688 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol
+    id="close"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M18 6 6 18M6 6l12 12" />
+  </symbol>
+
+  <symbol
+    id="user"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+    <circle cx="12" cy="7" r="4"></circle>
+  </symbol>
+  <symbol
+    id="elements"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M2 10h8L6 3l-4 7ZM14 3h7v7h-7z" />
+    <rect width="7" height="7" x="2" y="15" rx="3.5" />
+    <path d="m21.657 18-2 3.464h-4l-2-3.464 2-3.464h4l2 3.464Z" />
+  </symbol>
+
+  <symbol
+    id="layout"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect width="18" height="18" x="3" y="3" rx="2" />
+    <path d="M3 9h18M9 21V9" />
+  </symbol>
+  <symbol
+    id="img"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect width="18" height="18" x="3" y="3" rx="2" />
+    <path d="M3 9h18M9 21V9" />
+  </symbol>
+  <symbol
+    id="doc"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
+    <path d="M14 3v5h5m-3 5H8m8 4H8m2-8H8" />
+  </symbol>
+
+  <symbol
+    id="share"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="18" cy="5" r="3" />
+    <circle cx="6" cy="12" r="3" />
+    <circle cx="18" cy="19" r="3" />
+    <path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98" />
+  </symbol>
+  <symbol
+    id="blog"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect width="18" height="18" x="3" y="3" rx="2" />
+    <path d="M3 15h18" />
+  </symbol>
+
+  <!-- Arrows -->
+  <symbol
+    id="arrow-up"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M12 19V6m-7 6 7-7 7 7" />
+  </symbol>
+  <symbol
+    id="arrow-down"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M12 5v13m-7-6 7 7 7-7" />
+  </symbol>
+  <symbol
+    id="arrow-left"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M19 12H6m6-7-7 7 7 7" />
+  </symbol>
+  <symbol
+    id="arrow-right"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M5 12h13m-6-7 7 7-7 7" />
+  </symbol>
+
+  <symbol
+    id="arrow-up-left"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M17 17 7.8 7.7M7 17V7h10" />
+  </symbol>
+  <symbol
+    id="arrow-up-right"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m7 17 9.2-9.2M17 17V7H7" />
+  </symbol>
+  <symbol
+    id="arrow-down-left"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m17 7-9.2 9.2M7 7v10h10" />
+  </symbol>
+  <symbol
+    id="arrow-down-right"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m7 7 9.2 9.2M17 7v10H7" />
+  </symbol>
+  <symbol
+    id="corner-down-left"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m10 9-6 6 6 6" />
+    <path d="M20 4v7a4 4 0 0 1-4 4H5" />
+  </symbol>
+  <symbol
+    id="corner-down-right"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m14 9 6 6-6 6" />
+    <path d="M4 4v7a4 4 0 0 0 4 4h11" />
+  </symbol>
+  <symbol
+    id="corner-up-left"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m10 16-6-6 6-6" />
+    <path d="M20 21v-7a4 4 0 0 0-4-4H5" />
+  </symbol>
+  <symbol
+    id="corner-up-right"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m14 16 6-6-6-6" />
+    <path d="M4 21v-7a4 4 0 0 1 4-4h11" />
+  </symbol>
+  <symbol
+    id="chevron-left"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m15 18-6-6 6-6" />
+  </symbol>
+  <symbol
+    id="chevron-right"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m9 18 6-6-6-6" />
+  </symbol>
+  <symbol
+    id="chevron-up"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m18 15-6-6-6 6" />
+  </symbol>
+  <symbol
+    id="chevron-down"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m6 9 6 6 6-6" />
+  </symbol>
+
+  <symbol
+    id="chevrons-left"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m11 17-5-5 5-5m7 10-5-5 5-5" />
+  </symbol>
+  <symbol
+    id="chevrons-right"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m13 17 5-5-5-5M6 17l5-5-5-5" />
+  </symbol>
+  <symbol
+    id="chevrons-up"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m17 11-5-5-5 5m10 7-5-5-5 5" />
+  </symbol>
+  <symbol
+    id="chevrons-down"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m7 13 5 5 5-5M7 6l5 5 5-5" />
+  </symbol>
+
+  <symbol
+    id="arrow-up-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="m16 12-4-4-4 4m4 4V9" />
+  </symbol>
+  <symbol
+    id="arrow-down-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="m16 12-4 4-4-4m4-4v7" />
+  </symbol>
+  <symbol
+    id="arrow-left-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="m12 8-4 4 4 4m4-4H9" />
+  </symbol>
+  <symbol
+    id="arrow-right-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="m12 8 4 4-4 4m-4-4h7" />
+  </symbol>
+
+  <symbol
+    id="refresh"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M21.5 2v6h-6m-13 14v-6h6M2 11.5a10 10 0 0 1 18.8-4.3m1.2 5.3a10 10 0 0 1-18.8 4.2"
+    />
+  </symbol>
+
+  <symbol
+    id="rotate-left"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M2.5 2v6h6m-5.84 7.57a10 10 0 1 0 .57-8.38" />
+  </symbol>
+  <symbol
+    id="rotate-right"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M21.5 2v6h-6m5.84 7.57a10 10 0 1 1-.57-8.38" />
+  </symbol>
+  <symbol
+    id="repeat"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m17 2.1 4 4-4 4" />
+    <path d="M3 12.2v-2a4 4 0 0 1 4-4h12.8M7 21.9l-4-4 4-4" />
+    <path d="M21 11.8v2a4 4 0 0 1-4 4H4.2" />
+  </symbol>
+
+  <symbol
+    id="arrow-in"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4m-5-4 5-5-5-5m3.8 5H3" />
+  </symbol>
+  <symbol
+    id="arrow-out"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M10 3H6a2 2 0 0 0-2 2v14c0 1.1.9 2 2 2h4m6-4 5-5-5-5m3.8 5H9" />
+  </symbol>
+  <symbol
+    id="upload"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4m-4-7-5-5-5 5m5-3.8v10.3"
+    />
+  </symbol>
+  <symbol
+    id="download"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4m-4-6-5 5-5-5m5 3.8V2.5"
+    />
+  </symbol>
+  <symbol
+    id="upload-cloud"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M21.2 15c.7-1.2 1-2.5.7-3.9-.6-2-2.4-3.5-4.4-3.5h-1.2c-.7-3-3.2-5.2-6.2-5.6-3-.3-5.9 1.3-7.3 4-1.2 2.5-1 6.5.5 8.8m8.7-1.6V21"
+    />
+    <path d="m16 16-4-4-4 4" />
+  </symbol>
+  <symbol
+    id="download-cloud"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M21.2 15c.7-1.2 1-2.5.7-3.9-.6-2-2.4-3.5-4.4-3.5h-1.2c-.7-3-3.2-5.2-6.2-5.6-3-.3-5.9 1.3-7.3 4-1.2 2.5-1 6.5.5 8.8m8.7 5V12m4 5-4 4-4-4"
+    />
+  </symbol>
+
+  <symbol
+    id="minimize"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M4 14h6v6m-7 1 6.1-6.1M20 10h-6V4m7-1-6.1 6.1" />
+  </symbol>
+  <symbol
+    id="maximize"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M15 3h6v6m-7 1 6.1-6.1M9 21H3v-6m7-1-6.1 6.1" />
+  </symbol>
+  <symbol
+    id="trend-up"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m20.2 7.8-7.7 7.7-4-4-5.7 5.7" />
+    <path d="M15 7h6v6" />
+  </symbol>
+  <symbol
+    id="trend-down"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m20.2 17.2-7.7-7.7-4 4-5.7-5.7" />
+    <path d="M15 18h6v-6" />
+  </symbol>
+  <symbol
+    id="shuffle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M16 3h5v5M4 20 20.2 3.8M21 16v5h-5m-1-6 5.1 5.1M4 4l5 5" />
+  </symbol>
+  <symbol
+    id="move"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="m5.2 9-3 3 3 3M9 5.2l3-3 3 3m0 13.7-3 3-3-3M18.9 9l3 3-3 3M3.3 12h17.4M12 3.2v17.6"
+    />
+  </symbol>
+  <symbol
+    id="expand"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="m3.8 3.8 16.4 16.4m0-16.4L3.8 20.2M15 3h6v6M9 3H3v6m12 12h6v-6M9 21H3v-6"
+    />
+  </symbol>
+  <symbol
+    id="external-link"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M18 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8c0-1.1.9-2 2-2h5m5-3h6v6m-11 5L20.2 3.8"
+    />
+  </symbol>
+
+  <!-- Interface -->
+  <symbol
+    id="menu"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 12h18M3 6h18M3 18h18" />
+  </symbol>
+  <symbol
+    id="grid"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z" />
+  </symbol>
+  <symbol
+    id="loader"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"
+    />
+  </symbol>
+  <symbol
+    id="alert-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 8v4M12 16h.01" />
+  </symbol>
+  <symbol
+    id="alert-triangle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01"
+    />
+  </symbol>
+  <symbol
+    id="help-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01" />
+  </symbol>
+  <symbol
+    id="info-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 16v-4M12 8h.01" />
+  </symbol>
+  <symbol
+    id="hexagon"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m12 2 9 4.9V17l-9 5-9-4.9V7z" />
+  </symbol>
+  <symbol
+    id="octagon"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M7.86 2h8.28L22 7.86v8.28L16.14 22H7.86L2 16.14V7.86L7.86 2z" />
+  </symbol>
+  <symbol
+    id="triangle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 20h18L12 4z" />
+  </symbol>
+  <symbol
+    id="quote"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path fill="currentColor" stroke="none" d="M10 11h-4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-1c0 2 1 3 3 3v2c-3 0-4-2-4-5Z" />
+    <path fill="currentColor" stroke="none" d="M20 11h-4a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-1c0 2 1 3 3 3v2c-3 0-4-2-4-5Z" />
+  </symbol>
+  <symbol
+    id="square"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect width="18" height="18" x="3" y="3" rx="2" ry="2" />
+  </symbol>
+  <symbol
+    id="circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+  </symbol>
+  <symbol
+    id="plus"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M12 5v14M5 12h14" />
+  </symbol>
+  <symbol
+    id="minus"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M5 12h14" />
+  </symbol>
+  <symbol
+    id="x"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M18 6 6 18M6 6l12 12" />
+  </symbol>
+
+  <symbol
+    id="plus-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 8v8M8 12h8" />
+  </symbol>
+  <symbol
+    id="minus-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M8 12h8" />
+  </symbol>
+  <symbol
+    id="x-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="m15 9-6 6M9 9l6 6" />
+  </symbol>
+  <symbol
+    id="plus-square"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 3h18v18H3zm9 5v8m-4-4h8" />
+  </symbol>
+  <symbol
+    id="minus-square"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 3h18v18H3zm5 9h8" />
+  </symbol>
+  <symbol
+    id="x-square"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 3h18v18H3zm12 6-6 6m0-6 6 6" />
+  </symbol>
+
+  <symbol
+    id="check-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+    <path d="M22 4 12 14.01l-3-3" />
+  </symbol>
+  <symbol
+    id="check-square"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m9 11 3 3L22 4" />
+    <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+  </symbol>
+  <symbol
+    id="check"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M20 6 9 17l-5-5" />
+  </symbol>
+  <symbol
+    id="checkbox"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="4"
+  >
+    <path d="M20 6 9 17l-5-5" />
+  </symbol>
+
+  <symbol
+    id="forbidden"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="m4.93 4.93 14.14 14.14" />
+  </symbol>
+  <symbol
+    id="more-horisontal"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="1" />
+    <circle cx="19" cy="12" r="1" />
+    <circle cx="5" cy="12" r="1" />
+  </symbol>
+  <symbol
+    id="more"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="1" />
+    <circle cx="12" cy="5" r="1" />
+    <circle cx="12" cy="19" r="1" />
+  </symbol>
+  <symbol
+    id="edit-box"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34" />
+    <path d="m18 2 4 4-10 10H8v-4L18 2z" />
+  </symbol>
+  <symbol
+    id="edit"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m16 3 5 5L8 21H3v-5L16 3z" />
+  </symbol>
+  <symbol
+    id="edit-line"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m14 2 4 4L7 17H3v-4L14 2zM3 22h18" />
+  </symbol>
+  <symbol
+    id="settings"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="3" />
+    <path
+      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+    />
+  </symbol>
+  <symbol
+    id="sliders"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"
+    />
+  </symbol>
+  <symbol
+    id="search"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="11" cy="11" r="8" />
+    <path d="m21 21-4.35-4.35" />
+  </symbol>
+  <symbol
+    id="search-plus"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="11" cy="11" r="8" />
+    <path d="m21 21-4.35-4.35M11 8v6M8 11h6" />
+  </symbol>
+  <symbol
+    id="search-minus"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="11" cy="11" r="8" />
+    <path d="m21 21-4.35-4.35M8 11h6" />
+  </symbol>
+
+  <symbol
+    id="share"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="18" cy="5" r="3" />
+    <circle cx="6" cy="12" r="3" />
+    <circle cx="18" cy="19" r="3" />
+    <path d="m8.59 13.51 6.83 3.98M15.41 6.51l-6.82 3.98" />
+  </symbol>
+  <symbol
+    id="clock"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 6v6l4 2" />
+  </symbol>
+  <symbol
+    id="eye"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+    <circle cx="12" cy="12" r="3" />
+  </symbol>
+  <symbol
+    id="eye-not"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z" />
+    <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+    <path d="m2.414 2.034 18.621 19.552" />
+  </symbol>
+  <symbol
+    id="star"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+    />
+  </symbol>
+  <symbol
+    id="heart"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+    />
+  </symbol>
+  <symbol
+    id="flag"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"
+    />
+  </symbol>
+  <symbol
+    id="bookmark"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m19 21-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" />
+  </symbol>
+  <symbol
+    id="message"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+    ></path>
+  </symbol>
+  <symbol
+    id="trash"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M10 11v6M14 11v6"
+    />
+  </symbol>
+  <symbol
+    id="dark"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+  </symbol>
+  <symbol
+    id="light"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="5" />
+    <path
+      d="M12 1v2m0 18v2M4.2 4.2l1.4 1.4m12.8 12.8 1.4 1.4M1 12h2m18 0h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4"
+    />
+  </symbol>
+  <symbol
+    id="thumb-down"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"
+    />
+  </symbol>
+  <symbol
+    id="thumb-up"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"
+    />
+  </symbol>
+  <symbol
+    id="bell"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M22 17H2a3 3 0 0 0 3-3V9a7 7 0 0 1 14 0v5a3 3 0 0 0 3 3zm-8.27 4a2 2 0 0 1-3.46 0"
+    ></path>
+  </symbol>
+  <symbol
+    id="email"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+    />
+    <path d="m22 6-10 7L2 6" />
+  </symbol>
+  <symbol
+    id="calendar"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+    <path d="M16 2v4M8 2v4M3 10h18" />
+  </symbol>
+  <symbol
+    id="lock"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+  </symbol>
+  <symbol
+    id="unlock"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect width="18" height="11" x="3" y="11" rx="2" ry="2" />
+    <path d="M7 11V7a5 5 0 0 1 9.9-1" />
+  </symbol>
+  <symbol
+    id="cart"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="10" cy="20.5" r="1" />
+    <circle cx="18" cy="20.5" r="1" />
+    <path
+      d="M2.5 2.5h3l2.7 12.4a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.6l1.6-8.4H7.1"
+    />
+  </symbol>
+  <symbol
+    id="shopping-bag"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M6 2 3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0"
+    />
+  </symbol>
+  <symbol
+    id="tag"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="m20.59 13.41-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82zM7 7h.01"
+    />
+  </symbol>
+  <symbol
+    id="location"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="10" r="3" />
+    <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
+  </symbol>
+  <symbol
+    id="pin"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="11.5" cy="8.5" r="5.5" />
+    <path d="M11.5 14v7" />
+  </symbol>
+  <symbol
+    id="compas"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="m16.2 7.8-2 6.3-6.4 2.1 2-6.3z" />
+  </symbol>
+  <symbol
+    id="home"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M20 9v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9" />
+    <path d="M9 22V12h6v10M2 10.6 12 2l10 8.6" />
+  </symbol>
+  <symbol
+    id="inbox"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M21.5 12H16c-.7 2-2 3-4 3s-3.3-1-4-3H2.5" />
+    <path
+      d="M5.5 5.1 2 12v6c0 1.1.9 2 2 2h16a2 2 0 0 0 2-2v-6l-3.4-6.9A2 2 0 0 0 16.8 4H7.2a2 2 0 0 0-1.8 1.1z"
+    />
+  </symbol>
+  <symbol
+    id="credit-card"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect width="20" height="16" x="2" y="4" rx="2" />
+    <path d="M7 15h0M2 9.5h20" />
+  </symbol>
+  <symbol
+    id="code"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m16 18 6-6-6-6M8 6l-6 6 6 6" />
+  </symbol>
+  <symbol
+    id="copy"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect width="13" height="13" x="9" y="9" rx="2" ry="2" />
+    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+  </symbol>
+  <symbol
+    id="paste"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+    />
+    <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+  </symbol>
+  <symbol
+    id="cut"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="6" cy="6" r="3" />
+    <circle cx="6" cy="18" r="3" />
+    <path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12" />
+  </symbol>
+  <symbol
+    id="attach"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"
+    />
+  </symbol>
+  <symbol
+    id="save"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
+    <path d="M17 21v-8H7v8M7 3v5h8" />
+  </symbol>
+
+  <!-- Medias -->
+  <symbol
+    id="play"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m8 5 11 7-11 7z" />
+  </symbol>
+  <symbol
+    id="pause"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M9 5v14M15 5v14" />
+  </symbol>
+  <symbol
+    id="stop"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="6" y="6" width="12" height="12" rx="2" />
+  </symbol>
+  <symbol
+    id="play-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <polygon points="10 8 16 12 10 16 10 8" />
+  </symbol>
+  <symbol
+    id="pause-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <line x1="10" y1="8" x2="10" y2="16" />
+    <line x1="14" y1="8" x2="14" y2="16" />
+  </symbol>
+  <symbol
+    id="stop-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <rect x="8" y="8" width="8" height="8" />
+  </symbol>
+  <symbol
+    id="shuffle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M2 18h1.4c1.3 0 2.5-.6 3.3-1.7l6.1-8.6c.7-1.1 2-1.7 3.3-1.7H22" />
+    <path d="m18 2 4 4-4 4" />
+    <path d="M2 6h1.9c1.5 0 2.9.9 3.6 2.2" />
+    <path d="M22 18h-5.9c-1.3 0-2.6-.7-3.3-1.8l-.5-.8" />
+    <path d="m18 14 4 4-4 4" />
+  </symbol>
+  <symbol
+    id="forward-step"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m5 4 10 8-10 8zM19 5v14"/>
+  </symbol>
+  <symbol
+    id="backward-step"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round" 
+    stroke-width="2"
+  >
+    <path d="M19 20 9 12l10-8zM5 19V5"/>
+  </symbol>
+  <symbol
+    id="forward"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+   <path d="m13 19 9-7-9-7zM2 19l9-7-9-7z"/>
+  </symbol>
+  <symbol
+    id="backward"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m11 19-9-7 9-7zM22 19l-9-7 9-7z"/>
+  </symbol>
+  <symbol
+    id="mic"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M12 16a4 4 0 0 0 4-4V7a4 4 0 1 0-8 0v5a4 4 0 0 0 4 4zM12 16v4M8 20h8M5 12a7 7 0 0 0 14 0"
+    />
+  </symbol>
+  <symbol
+    id="volume"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M11 5 6 9H3v6h3l5 4zM15.5 8.5a5 5 0 0 1 0 7M18 6a8 8 0 0 1 0 12" />
+  </symbol>
+
+  <!-- Files & folders -->
+  <symbol
+    id="file"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6"
+    />
+  </symbol>
+  <symbol
+    id="file-text"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h8M8 9h2"
+    />
+  </symbol>
+  <symbol
+    id="folder"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+    />
+  </symbol>
+  <symbol
+    id="folder-open"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v1H3zM3 10h18l-2 8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+    />
+  </symbol>
+  <symbol
+    id="folder-plus"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M12 10v6M9 13h6M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
+    />
+  </symbol>
+
+  <!-- Editor -->
+  <symbol
+    id="bold"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M6 4h7a4 4 0 0 1 0 8H6zm0 8h8a4 4 0 0 1 0 8H6z" />
+  </symbol>
+  <symbol
+    id="italic"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M14 4h5M5 20h5M15 4 9 20" />
+  </symbol>
+  <symbol
+    id="underline"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M6 4v6a6 6 0 0 0 12 0V4M5 20h14" />
+  </symbol>
+  <symbol
+    id="link"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M10 14a5 5 0 0 1 0-7l1.5-1.5a5 5 0 1 1 7 7L17 14M14 10a5 5 0 0 1 0 7L12.5 18.5a5 5 0 1 1-7-7L7 10"
+    />
+  </symbol>
+  <symbol
+    id="scissors"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="6" cy="6" r="3" />
+    <circle cx="6" cy="18" r="3" />
+    <path d="M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12" />
+  </symbol>
+
+  <!-- Symbols and shapes -->
+  <symbol
+    id="diamond"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m12 3 8 9-8 9-8-9z" />
+  </symbol>
+  <symbol
+    id="pentagon"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="m12 2 8.5 6.2-3.2 10h-10.6L3.5 8.2z" />
+  </symbol>
+
+  <!-- Graphs & charts -->
+  <symbol
+    id="bar-chart"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M4 20V10M10 20V4M16 20v-7M22 20V8" />
+  </symbol>
+  <symbol
+    id="line-chart"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 3v18h18M7 14l4-4 3 3 6-6" />
+  </symbol>
+  <symbol
+    id="pie-chart"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M12 2v10h10A10 10 0 1 1 12 2z" />
+  </symbol>
+  <symbol
+    id="activity"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M22 12h-4l-3 7-6-14-3 7H2" />
+  </symbol>
+
+  <!-- Devices -->
+  <symbol
+    id="monitor"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="4" width="18" height="12" rx="2" />
+    <path d="M8 20h8M12 16v4" />
+  </symbol>
+  <symbol
+    id="tablet"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="5" y="2" width="14" height="20" rx="2" />
+    <path d="M12 18h.01" />
+  </symbol>
+  <symbol
+    id="phone"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="7" y="2" width="10" height="20" rx="2" />
+    <path d="M12 18h.01" />
+  </symbol>
+  <symbol
+    id="watch"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="6" y="7" width="12" height="10" rx="2" />
+    <path d="M9 2h6M9 22h6M12 10v2l2 2" />
+  </symbol>
+
+  <!-- Social Media -->
+  <symbol
+    id="facebook"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M14 9h3V5h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"
+    />
+  </symbol>
+  <symbol
+    id="x-twitter"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    stroke="none"
+  >
+    <path
+      d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+    />
+  </symbol>
+  <symbol
+    id="instagram"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <circle cx="17.5" cy="6.5" r="1" />
+  </symbol>
+  <symbol
+    id="linkedin"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path
+      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 1 0-4 0v7h-4V9h4v2a4 4 0 0 1 2-3zM2 9h4v12H2z"
+    />
+    <circle cx="4" cy="4" r="2" />
+  </symbol>
+
+  <!-- Layout -->
+  <symbol
+    id="layout-sidebar"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2" />
+    <path d="M9 3v18" />
+  </symbol>
+  <symbol
+    id="layout-grid"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="8" height="8" rx="1" />
+    <rect x="13" y="3" width="8" height="8" rx="1" />
+    <rect x="3" y="13" width="8" height="8" rx="1" />
+    <rect x="13" y="13" width="8" height="8" rx="1" />
+  </symbol>
+  <symbol
+    id="layout-topbar"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2" />
+    <path d="M3 9h18" />
+  </symbol>
+  <symbol
+    id="layout-columns"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2" />
+    <path d="M12 3v18" />
+  </symbol>
+  <symbol
+    id="layout-rows"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2" />
+    <path d="M3 12h18" />
+  </symbol>
+
+  <symbol
+    id="user"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+    <circle cx="12" cy="7" r="4" />
+  </symbol>
+  <symbol
+    id="user-check"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+    <circle cx="8.5" cy="7" r="4" />
+    <path d="m17 11 2 2 4-4" />
+  </symbol>
+  <symbol
+    id="user-plus"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+    <circle cx="8.5" cy="7" r="4" />
+    <path d="M20 8v6M23 11h-6" />
+  </symbol>
+  <symbol
+    id="user-minus"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+    <circle cx="8.5" cy="7" r="4" />
+    <path d="M23 11h-6" />
+  </symbol>
+  <symbol
+    id="users"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+    <circle cx="9" cy="7" r="4" />
+    <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+  </symbol>
+  <symbol
+    id="templates"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect width="18" height="18" x="3" y="3" rx="2" />
+    <path d="M3 9h18M9 21V9" />
+  </symbol>
+  <!-- UI icons for the home page -->
+  <symbol
+    id="templates-ui"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="1"
+  >
+    <rect width="18" height="18" x="3" y="3" rx="2" />
+    <path d="M3 9h18M9 21V9" />
+  </symbol>
+  <symbol
+    id="grid-ui"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z" />
+  </symbol>
+  <symbol
+    id="elements-ui"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M2 10h8L6 3l-4 7ZM14 3h7v7h-7z" />
+    <rect width="7" height="7" x="2" y="15" rx="3.5" />
+    <path d="m21.657 18-2 3.464h-4l-2-3.464 2-3.464h4l2 3.464Z" />
+  </symbol>
+  <symbol
+    id="corner-left-down"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M15 14l-6 6-6-6"></path>
+    <path d="M20 4h-7a4 4 0 0 0-4 4v11"></path>
+  </symbol>
+  <symbol
+    id="corner-left-up"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M15 10L9 4l-6 6"></path>
+    <path d="M20 20h-7a4 4 0 0 1-4-4V5"></path>
+  </symbol>
+  <symbol
+    id="corner-right-down"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M9 14l6 6 6-6"></path>
+    <path d="M4 4h7a4 4 0 0 1 4 4v11"></path>
+  </symbol>
+  <symbol
+    id="corner-right-up"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M9 10l6-6 6 6"></path>
+    <path d="M4 20h7a4 4 0 0 0 4-4V5"></path>
+  </symbol>
+  <symbol
+    id="arrow-in-square"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M15 3h6v18h-6M10 17l5-5-5-5M13.8 12H3"></path>
+  </symbol>
+  <symbol
+    id="arrow-in-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M10 17l5-5-5-5"></path>
+    <path d="M13.8 12H3m9 10a10 10 0 1 0 0-20"></path>
+  </symbol>
+  <symbol
+    id="arrow-out-square"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M16 17l5-5-5-5M19.8 12H9M10 3H4v18h6"></path>
+  </symbol>
+  <symbol
+    id="arrow-out-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M16 17l5-5-5-5M19.8 12H9M13 22a10 10 0 1 1 0-20"></path>
+  </symbol>
+  <symbol
+    id="alert-octagon"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <polygon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"></polygon>
+    <line x1="12" y1="8" x2="12" y2="12"></line>
+    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+  </symbol>
+  <symbol
+    id="info"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="12" y1="16" x2="12" y2="12"></line>
+    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+  </symbol>
+  <symbol
+    id="map-marker-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M18 16.016c1.245.529 2 1.223 2 1.984 0 1.657-3.582 3-8 3s-8-1.343-8-3c0-.76.755-1.456 2-1.984"></path>
+    <path d="M17 8A5 5 0 0 0 7 8c0 3.526 5 8 5 8s5-4.474 5-8z"></path>
+  </symbol>
+  <symbol
+    id="map-marker-3"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="10" r="3"></circle>
+    <path d="M12 2a8 8 0 0 0-8 8c0 1.892.402 3.13 1.5 4.5L12 22l6.5-7.5c1.098-1.37 1.5-2.608 1.5-4.5a8 8 0 0 0-8-8z"></path>
+  </symbol>
+  <symbol
+    id="home-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 0 0 1 1h3m10-11l2 2m-2-2v10a1 1 0 0 1-1 1h-3m-4 0a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1m-2 0h2"></path>
+  </symbol>
+  <symbol
+    id="volume-1"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+  </symbol>
+  <symbol
+    id="volume-x"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+    <line x1="23" y1="9" x2="17" y2="15"></line>
+    <line x1="17" y1="9" x2="23" y2="15"></line>
+  </symbol>
+  <symbol
+    id="music"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M9 18V5l12-2v13"></path>
+    <circle cx="6" cy="18" r="3"></circle>
+    <circle cx="18" cy="16" r="3"></circle>
+  </symbol>
+  <symbol
+    id="video-off"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10"></path>
+    <line x1="1" y1="1" x2="23" y2="23"></line>
+  </symbol>
+  <symbol
+    id="video"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <polygon points="23 7 16 12 23 17 23 7"></polygon>
+    <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+  </symbol>
+  <symbol
+    id="camera"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+    <circle cx="12" cy="13" r="4"></circle>
+  </symbol>
+  <symbol
+    id="film"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+    <line x1="7" y1="2" x2="7" y2="22"></line>
+    <line x1="17" y1="2" x2="17" y2="22"></line>
+    <line x1="2" y1="12" x2="22" y2="12"></line>
+    <line x1="2" y1="7" x2="7" y2="7"></line>
+    <line x1="2" y1="17" x2="7" y2="17"></line>
+    <line x1="17" y1="17" x2="22" y2="17"></line>
+    <line x1="17" y1="7" x2="22" y2="7"></line>
+  </symbol>
+  <symbol
+    id="radio"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="2"></circle>
+    <path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"></path>
+  </symbol>
+  <symbol
+    id="file-plus"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"></path>
+    <path d="M14 3v5h5M12 18v-6M9 15h6"></path>
+  </symbol>
+  <symbol
+    id="file-minus"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"></path>
+    <path d="M14 3v5h5M9 15h6"></path>
+  </symbol>
+  <symbol
+    id="file-x"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M14 2H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V8l-6-6z"></path>
+    <path d="M14 3v5h5M9.9 17.1L14 13M9.9 12.9L14 17"></path>
+  </symbol>
+  <symbol
+    id="file-plus-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M20 11.08V8l-6-6H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h6"></path>
+    <path d="M14 3v5h5M18 21v-6M15 18h6"></path>
+  </symbol>
+  <symbol
+    id="file-minus-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M20 11.08V8l-6-6H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h6"></path>
+    <path d="M14 3v5h5M15 18h6"></path>
+  </symbol>
+  <symbol
+    id="file-x-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M20 11.08V8l-6-6H6a2 2 0 0 0-2 2v16c0 1.1.9 2 2 2h6"></path>
+    <path d="M14 3v5h5M15.88 20.12L21 15M15.88 15l5.12 5.12"></path>
+  </symbol>
+  <symbol
+    id="folder-minus"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+    <line x1="9" y1="14" x2="15" y2="14"></line>
+  </symbol>
+  <symbol
+    id="folder-x"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+    <path d="M9.9 17.1L14 13M9.9 12.9L14 17"></path>
+  </symbol>
+  <symbol
+    id="folder-plus-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z"></path>
+    <path d="M8 13h8M12 9v8"></path>
+  </symbol>
+  <symbol
+    id="folder-minus-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z"></path>
+    <path d="M8 13h8"></path>
+  </symbol>
+  <symbol
+    id="folder-x-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2z"></path>
+    <path d="M9.5 17.5l5-5M9.5 12.5l5 5"></path>
+  </symbol>
+  <symbol
+    id="strikethrough"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M17.3 4.9c-2.3-.6-4.4-1-6.2-.9-2.7 0-5.3.7-5.3 3.6 0 1.5 1.8 3.3 7.2 3.3h10M5 12h1.1c5.4 0 7.2 1.8 7.2 3.3 0 2.6-2 3.9-5.3 3.9-2 0-3.7-.5-6-1.5"></path>
+  </symbol>
+  <symbol
+    id="type"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <polyline points="4 7 4 4 20 4 20 7"></polyline>
+    <line x1="9" y1="20" x2="15" y2="20"></line>
+    <line x1="12" y1="4" x2="12" y2="20"></line>
+  </symbol>
+  <symbol
+    id="align-left"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <line x1="17" y1="10" x2="3" y2="10"></line>
+    <line x1="21" y1="6" x2="3" y2="6"></line>
+    <line x1="21" y1="14" x2="3" y2="14"></line>
+    <line x1="17" y1="18" x2="3" y2="18"></line>
+  </symbol>
+  <symbol
+    id="align-center"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <line x1="18" y1="10" x2="6" y2="10"></line>
+    <line x1="21" y1="6" x2="3" y2="6"></line>
+    <line x1="21" y1="14" x2="3" y2="14"></line>
+    <line x1="18" y1="18" x2="6" y2="18"></line>
+  </symbol>
+  <symbol
+    id="align-right"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <line x1="21" y1="10" x2="7" y2="10"></line>
+    <line x1="21" y1="6" x2="3" y2="6"></line>
+    <line x1="21" y1="14" x2="3" y2="14"></line>
+    <line x1="21" y1="18" x2="7" y2="18"></line>
+  </symbol>
+  <symbol
+    id="align-justify"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <line x1="21" y1="10" x2="3" y2="10"></line>
+    <line x1="21" y1="6" x2="3" y2="6"></line>
+    <line x1="21" y1="14" x2="3" y2="14"></line>
+    <line x1="21" y1="18" x2="3" y2="18"></line>
+  </symbol>
+  <symbol
+    id="table"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+    <path d="M21 12H3M12 3v18"></path>
+  </symbol>
+  <symbol
+    id="table-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 3h18v18H3zM21 9H3M21 15H3M12 3v18"></path>
+  </symbol>
+  <symbol
+    id="list"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <line x1="8" y1="6" x2="21" y2="6"></line>
+    <line x1="8" y1="12" x2="21" y2="12"></line>
+    <line x1="8" y1="18" x2="21" y2="18"></line>
+    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+  </symbol>
+  <symbol
+    id="at-sign"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="4"></circle>
+    <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-3.92 7.94"></path>
+  </symbol>
+  <symbol
+    id="percent"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <line x1="19" y1="5" x2="5" y2="19"></line>
+    <circle cx="6.5" cy="6.5" r="2.5"></circle>
+    <circle cx="17.5" cy="17.5" r="2.5"></circle>
+  </symbol>
+  <symbol
+    id="dollar-sign"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <line x1="12" y1="1" x2="12" y2="23"></line>
+    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+  </symbol>
+  <symbol
+    id="bluetooth"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <polyline points="6.5 6.5 17.5 17.5 12 23 12 1 17.5 6.5 6.5 17.5"></polyline>
+  </symbol>
+  <symbol
+    id="hash"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <line x1="4" y1="9" x2="20" y2="9"></line>
+    <line x1="4" y1="15" x2="20" y2="15"></line>
+    <line x1="10" y1="3" x2="8" y2="21"></line>
+    <line x1="16" y1="3" x2="14" y2="21"></line>
+  </symbol>
+  <symbol
+    id="power"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M18.36 6.64a9 9 0 1 1-12.73 0"></path>
+    <line x1="12" y1="2" x2="12" y2="12"></line>
+  </symbol>
+  <symbol
+    id="command"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path>
+  </symbol>
+  <symbol
+    id="rss"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M4 11a9 9 0 0 1 9 9"></path>
+    <path d="M4 4a16 16 0 0 1 16 16"></path>
+    <circle cx="5" cy="19" r="1"></circle>
+  </symbol>
+  <symbol
+    id="airplay"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+    <polygon points="12 15 17 21 7 21 12 15"></polygon>
+  </symbol>
+  <symbol
+    id="cast"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M2 16.1A5 5 0 0 1 5.9 20M2 12.05A9 9 0 0 1 9.95 20M2 8V6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-6"></path>
+    <line x1="2" y1="20" x2="2.01" y2="20"></line>
+  </symbol>
+  <symbol
+    id="wifi"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+    <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+    <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+    <line x1="12" y1="20" x2="12.01" y2="20"></line>
+  </symbol>
+  <symbol
+    id="user-x"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    <circle cx="8.5" cy="7" r="4"></circle>
+    <line x1="18" y1="8" x2="23" y2="13"></line>
+    <line x1="23" y1="8" x2="18" y2="13"></line>
+  </symbol>
+  <symbol
+    id="user-circle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M5.52 19c1.15-1.3 3.2-2 4.98-2h3c1.78 0 3.83.7 4.98 2"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+    <circle cx="12" cy="12" r="10"></circle>
+  </symbol>
+  <symbol
+    id="bar-chart-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <line x1="18" y1="20" x2="18" y2="10"></line>
+    <line x1="12" y1="20" x2="12" y2="4"></line>
+    <line x1="6" y1="20" x2="6" y2="14"></line>
+  </symbol>
+  <symbol
+    id="bar-chart-3"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M12 20V10M6 20V4M18 20v-6"></path>
+  </symbol>
+  <symbol
+    id="bar-chart-4"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="12" width="4" height="9" rx="1"></rect>
+    <rect x="10" y="8" width="4" height="13" rx="1"></rect>
+    <rect x="17" y="3" width="4" height="18" rx="1"></rect>
+  </symbol>
+  <symbol
+    id="pie-chart-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M12 2a10 10 0 1 0 10 10H12V2zM21.18 8.02c-1-2.3-2.85-4.17-5.16-5.18"></path>
+  </symbol>
+  <symbol
+    id="pie-chart-3"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20z"></path>
+    <path d="M19 6l-7 6V2.5"></path>
+  </symbol>
+  <symbol
+    id="pie-chart-4"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M21.5 12H12V2.5"></path>
+    <circle cx="12" cy="12" r="10"></circle>
+  </symbol>
+  <symbol
+    id="pie-chart-5"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M18.6 18.6L12 12V2.5"></path>
+    <circle cx="12" cy="12" r="10"></circle>
+  </symbol>
+  <symbol
+    id="line-chart-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 3v18h18"></path>
+    <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+  </symbol>
+  <symbol
+    id="speaker"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+    <circle cx="12" cy="14" r="4"></circle>
+    <line x1="12" y1="6" x2="12.01" y2="6"></line>
+  </symbol>
+  <symbol
+    id="headphones"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+  </symbol>
+  <symbol
+    id="tv"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+    <polyline points="17 2 12 7 7 2"></polyline>
+  </symbol>
+  <symbol
+    id="hard-drive"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <line x1="22" y1="12" x2="2" y2="12"></line>
+    <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+    <line x1="6" y1="16" x2="6.01" y2="16"></line>
+    <line x1="10" y1="16" x2="10.01" y2="16"></line>
+  </symbol>
+  <symbol
+    id="database"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+  </symbol>
+  <symbol
+    id="printer"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <polyline points="6 9 6 2 18 2 18 9"></polyline>
+    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+    <rect x="6" y="14" width="12" height="8"></rect>
+  </symbol>
+  <symbol
+    id="server"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+    <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+    <line x1="6" y1="6" x2="6.01" y2="6"></line>
+    <line x1="6" y1="18" x2="6.01" y2="18"></line>
+  </symbol>
+  <symbol
+    id="cpu"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+    <rect x="9" y="9" width="6" height="6"></rect>
+    <line x1="9" y1="1" x2="9" y2="4"></line>
+    <line x1="15" y1="1" x2="15" y2="4"></line>
+    <line x1="9" y1="20" x2="9" y2="23"></line>
+    <line x1="15" y1="20" x2="15" y2="23"></line>
+    <line x1="20" y1="9" x2="23" y2="9"></line>
+    <line x1="20" y1="14" x2="23" y2="14"></line>
+    <line x1="1" y1="9" x2="4" y2="9"></line>
+    <line x1="1" y1="14" x2="4" y2="14"></line>
+  </symbol>
+  <symbol
+    id="disc"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10"></circle>
+    <circle cx="12" cy="12" r="3"></circle>
+  </symbol>
+  <symbol
+    id="layout-2"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+    <line x1="3" y1="9" x2="21" y2="9"></line>
+    <line x1="9" y1="21" x2="9" y2="9"></line>
+  </symbol>
+  <symbol
+    id="layout-3"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+    <path d="M3 9h18M9 9v12"></path>
+    <path d="M3 15h6"></path>
+  </symbol>
+  <symbol
+    id="layout-4"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+    <path d="M3 9h18M9 21V9M15 21V9"></path>
+  </symbol>
+  <symbol
+    id="layout-5"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+    <path d="M12 3v18M3 12h18"></path>
+  </symbol>
+  <symbol
+    id="layout-6"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+    <path d="M3 15h18M3 9h18"></path>
+  </symbol>
+
+  <symbol
+    id="bolt"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+  </symbol>
+
+  <symbol
+    id="shield"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+  </symbol>
+
+  <symbol
+    id="puzzle"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.706 1.087.706 1.704s-.235 1.233-.706 1.704l-1.611 1.611a.98.98 0 0 1-.837.276c-.47-.07-.802-.48-.968-.925a2.501 2.501 0 1 0-3.214 3.214c.446.166.855.497.925.968a.979.979 0 0 1-.276.837l-1.61 1.61a2.404 2.404 0 0 1-3.408 0l-1.569-1.568a.921.921 0 0 0-.878-.289c-.33.052-.632.249-.842.48A2.5 2.5 0 0 1 2 17.5V14a1 1 0 0 1 1-1h2.5a1 1 0 0 0 1-1v-1a1 1 0 0 0-1-1H3a1 1 0 0 1-1-1V6.5a2.5 2.5 0 0 1 3.369-2.349c.236.096.498.04.668-.13l1.275-1.274a2.404 2.404 0 0 1 3.408 0l1.568 1.569c.23.23.556.338.878.289.33-.053.632-.25.842-.48A2.5 2.5 0 0 1 17.5 2H20a1 1 0 0 1 1 1v2.5a1 1 0 0 1-1 1h-1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1h1a1 1 0 0 1 1 1V12" />
+  </symbol>
+
+  <!-- Brand Icons -->
+  <symbol
+    id="github"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+    <path d="M9 18c-4.51 2-5-2-7-2" />
+  </symbol>
+
+  <symbol
+    id="slack"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <rect width="3" height="8" x="13" y="2" rx="1.5" />
+    <path d="M19 8.5V10h1.5A1.5 1.5 0 1 0 19 8.5" />
+    <rect width="3" height="8" x="8" y="14" rx="1.5" />
+    <path d="M5 15.5V14H3.5A1.5 1.5 0 1 0 5 15.5" />
+    <rect width="8" height="3" x="14" y="13" rx="1.5" />
+    <path d="M15.5 19H14v1.5a1.5 1.5 0 1 0 1.5-1.5" />
+    <rect width="8" height="3" x="2" y="8" rx="1.5" />
+    <path d="M8.5 5H10V3.5A1.5 1.5 0 1 0 8.5 5" />
+  </symbol>
+
+  <symbol
+    id="aws"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M17 18c.65.37 1.27.79 1.84 1.26A9.97 9.97 0 0 0 22 12c0-5.52-4.48-10-10-10S2 6.48 2 12a9.97 9.97 0 0 0 3.16 7.26c.57-.47 1.19-.89 1.84-1.26" />
+    <path d="m7.5 10 1.5 6 3-4 3 4 1.5-6" />
+  </symbol>
+
+  <symbol
+    id="figma"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z" />
+    <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z" />
+    <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z" />
+    <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z" />
+    <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z" />
+  </symbol>
+
+  <symbol
+    id="git-branch"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <line x1="6" y1="9" x2="6" y2="15" />
+    <circle cx="18" cy="6" r="3" />
+    <circle cx="6" cy="6" r="3" />
+    <circle cx="6" cy="18" r="3" />
+    <path d="M18 9a9 9 0 0 1-9 9" />
+  </symbol>
+
+  <symbol
+    id="glob"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <line x1="2" y1="12" x2="22" y2="12" />
+    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+  </symbol>
+
+  <symbol
+    id="zap"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+  >
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+  </symbol>
+
+</svg>

@@ -1,0 +1,18 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<div class="fixed inset-0 flex items-center justify-center z-[999]">
+  <!-- Backdrop -->
+  <div class="absolute inset-0 bg-slate-900/50 dark:bg-slate-900/80 backdrop-blur-sm" [class.cursor-pointer]="!!context"
+    [@backdrop] (click)="context?.close()">
+  </div>
+
+  <!-- Dialog Box -->
+  <div #dialogBox role="dialog" aria-modal="true"
+    class="relative bg-white dark:bg-slate-800 rounded-xl shadow overflow-hidden max-w-[calc(100%-32px)] max-h-[calc(100%-32px)] flex flex-col"
+    [@box]>
+    <ng-container #container></ng-container>
+  </div>
+</div>

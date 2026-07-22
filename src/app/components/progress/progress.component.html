@@ -1,0 +1,18 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<div [class]="trackClass()" tabindex="0">
+  <div [class]="fillClass()" [style.width.%]="clamped()"></div>
+  @if (showTip()) {
+    <div
+      [class]="tipClass()"
+      [style.left.%]="clamped()"
+      aria-hidden="true"
+    >
+      <span [class]="tipBubbleClass()">{{ displayValue() }}</span>
+      <span [class]="tipCaretClass()"></span>
+    </div>
+  }
+</div>

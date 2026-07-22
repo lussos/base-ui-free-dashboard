@@ -1,0 +1,34 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<div class="flex flex-col w-full relative px-4">
+  <!-- Header -->
+  <div class="flex justify-between items-center py-4">
+    @if (title()) {
+    <h3 class="!m-0 text-xl font-bold text-slate-900 dark:text-white">{{ title() }}</h3>
+    } @else {
+    <div class="flex-1"></div>
+    }
+    <!-- Navigation arrows -->
+    <div class="flex gap-2">
+      <button [disabled]="!canScrollPrev" base-icon-button (click)="scrollPrev()"
+        class="bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700">
+        <base-icon name="chevron-left"></base-icon>
+      </button>
+      <button [disabled]="!canScrollNext" base-icon-button (click)="scrollNext()"
+        class="bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700">
+        <base-icon name="chevron-right"></base-icon>
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="grid grid-flow-col auto-cols-[calc((100%-16px)/2)] sm:auto-cols-[calc((100%-32px)/3)] md:auto-cols-[calc((100%-48px)/4)] lg:auto-cols-[calc((100%-64px)/5)] gap-4 overflow-x-auto pb-2 carousel-track"
+    [class.snap-x]="!isDragging" [class.snap-mandatory]="!isDragging" #track (scroll)="onScroll()"
+    (mousedown)="onMouseDown($event)" (mouseleave)="onMouseLeave()" (mouseup)="onMouseUp()"
+    (mousemove)="onMouseMove($event)" (touchstart)="onTouchStart($event)" (touchend)="onTouchEnd($event)">
+    <ng-content></ng-content>
+  </div>
+</div>

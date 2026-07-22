@@ -1,0 +1,56 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<div class="carousel-inner relative w-full h-[400px] overflow-hidden">
+  <div [class]="trackClass()"
+       [style.width]="transition() === 'slide' ? (totalItems() * 100) + '%' : '100%'"
+       [style.transform]="transition() === 'slide' ? 'translateX(-' + (activeIndex() * (100 / totalItems())) + '%)' : 'none'">
+
+    <!-- Simple Slides (using slides input) -->
+    @if (slides() && slides().length > 0 && items().length === 0) {
+    @for (slide of slides(); track slide; let i = $index) {
+    <div
+      [class]="getSlideClass(i)"
+      [style.width]="transition() === 'slide' ? (100 / totalItems()) + '%' : '100%'">
+      <img [src]="slide" class="max-w-full max-h-full object-cover h-full w-full rounded-lg shadow-md"
+        alt="Gallery slide" />
+    </div>
+    }
+    }
+
+    <!-- Projected Items (base-carousel-item) -->
+    <ng-content></ng-content>
+  </div>
+</div>
+
+<!-- Indicators -->
+@if ((items().length > 1 || (slides() && slides().length > 1))) {
+<div class="carousel-indicators absolute bottom-4 left-0 right-0 z-20 flex justify-center gap-2 px-0 mb-4 list-none">
+  @for (item of (items().length > 0 ? items() : slides()); track $index; let i = $index) {
+  <button type="button"
+    class="box-content flex-initial h-1 px-0 py-0 mx-1 overflow-hidden cursor-pointer transition-all duration-600 rounded-full"
+    [class]="i === activeIndex() ? 
+      (dark() ? 'bg-black w-8 opacity-100' : 'bg-white w-8 opacity-100') : 
+      (dark() ? 'bg-black w-6 opacity-50' : 'bg-white w-6 opacity-50')" (click)="select(i)"></button>
+  }
+</div>
+}
+
+<!-- Controls -->
+@if ((items().length > 1 || (slides() && slides().length > 1))) {
+<button base-icon-button (click)="prev()" color="primary" size="sm"
+  class="!absolute left-2 top-1/2 -translate-y-1/2 z-30 bg-white/20 dark:bg-black/20 hover:bg-white/40 dark:hover:bg-black/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+  <div [class.invert]="dark()">
+    <base-icon name="chevron-left" class="w-6 h-6 stroke-slate-800 dark:stroke-slate-200"></base-icon>
+  </div>
+</button>
+
+<button base-icon-button (click)="next()" color="primary" size="sm"
+  class="!absolute right-2 top-1/2 -translate-y-1/2 z-30 bg-white/20 dark:bg-black/20 hover:bg-white/40 dark:hover:bg-black/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity">
+  <div [class.invert]="dark()">
+    <base-icon name="chevron-right" class="w-6 h-6 stroke-slate-800 dark:stroke-slate-200"></base-icon>
+  </div>
+</button>
+}

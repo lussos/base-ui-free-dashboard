@@ -1,0 +1,16 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<ng-template>
+  <div
+    #menuRoot
+    [id]="menuId"
+    [class]="menuClasses()"
+    role="menu"
+    tabindex="-1"
+    (keydown)="onMenuKeydown($event)">
+    <ng-content></ng-content>
+  </div>
+</ng-template>

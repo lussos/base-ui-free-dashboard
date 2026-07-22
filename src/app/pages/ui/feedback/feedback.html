@@ -1,0 +1,79 @@
+<app-showcase-page
+  title="Feedback"
+  description="Alerts, toasts, progress, meters, countdowns, and empty states."
+  [sections]="sections">
+  <app-showcase-section sectionId="alerts" title="Alerts" componentName="base-alert">
+    <div class="space-y-3">
+      <base-alert color="primary" variant="soft" [close]="true">Primary soft alert with dismiss.</base-alert>
+      <base-alert color="success" variant="soft">Payment completed successfully.</base-alert>
+      <base-alert color="warning" variant="outline">Please verify your email address.</base-alert>
+      <base-alert color="danger" variant="solid">Your session has expired.</base-alert>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="toasts"
+    title="Toasts"
+    description="Triggered via ToastService."
+    componentName="ToastService">
+    <div class="flex flex-wrap gap-2">
+      <button type="button" base-button color="success" (click)="showToast('success')">Success</button>
+      <button type="button" base-button color="danger" (click)="showToast('error')">Error</button>
+      <button type="button" base-button color="warning" (click)="showToast('warning')">Warning</button>
+      <button type="button" base-button color="primary" (click)="showToast('info')">Info</button>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="progress" title="Progress" componentName="base-progress">
+    <base-progress [value]="progress()" color="primary" size="md"></base-progress>
+    <base-progress [value]="35" color="success" size="sm"></base-progress>
+    <base-progress [value]="80" color="warning" size="lg"></base-progress>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="meter-group" title="Meter group" componentName="base-meter-group">
+    <base-meter-group [value]="storageMeters" [max]="64" size="md"></base-meter-group>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="animated-counter" title="Animated counter" componentName="base-animated-counter">
+    <div class="flex flex-wrap gap-8 text-2xl font-semibold text-slate-900 dark:text-white">
+      <base-animated-counter [value]="48295" prefix="$" separator=","></base-animated-counter>
+      <base-animated-counter [value]="1284" suffix=" users"></base-animated-counter>
+      <base-animated-counter [value]="98.6" [decimals]="1" suffix="%"></base-animated-counter>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="countdown" title="Countdown" componentName="base-countdown">
+    <base-countdown [targetDate]="launchDate"></base-countdown>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="coming-soon" title="Coming soon" componentName="base-coming-soon">
+    <base-coming-soon
+      title="Advanced analytics"
+      description="We're building richer reporting charts. Check back soon."></base-coming-soon>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="skeleton" title="Skeleton" componentName="base-skeleton">
+    <base-skeleton variant="text" [count]="3"></base-skeleton>
+    <div class="flex items-center gap-3">
+      <base-skeleton variant="circular" width="40px" height="40px"></base-skeleton>
+      <div class="flex-1">
+        <base-skeleton variant="text" [count]="2"></base-skeleton>
+      </div>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="spinner" title="Spinner" componentName="base-spinner">
+    <div class="flex flex-wrap items-center gap-6">
+      <base-spinner size="sm" color="primary"></base-spinner>
+      <base-spinner size="md" color="success"></base-spinner>
+      <base-spinner size="lg" color="accent"></base-spinner>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="empty-state" title="Empty state" componentName="base-empty-state">
+    <base-empty-state
+      iconName="inbox"
+      title="No messages yet"
+      description="When teammates mention you, notifications will show up here."></base-empty-state>
+  </app-showcase-section>
+</app-showcase-page>

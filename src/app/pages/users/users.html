@@ -1,0 +1,91 @@
+<div class="space-y-4 sm:space-y-6">
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+    <div>
+      <h2 class="text-lg font-semibold text-slate-900 dark:text-white">Manage Users</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400">Create, edit, and remove team members.</p>
+    </div>
+    <button type="button" base-button color="primary" class="w-full sm:w-auto" (click)="openCreate()">
+      <base-icon name="user-plus" class="w-4 h-4"></base-icon>
+      Add User
+    </button>
+  </div>
+
+  <!--
+    Notice: This template uses a basic static HTML table. Need advanced features like
+    virtual scrolling, column sorting, pagination, and row selection? Upgrade to Base UI Pro
+    for the advanced data-table component.
+  -->
+  <div
+    class="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900 dark:border-amber-900/60 dark:bg-amber-950/40 dark:text-amber-100"
+    role="note">
+    <p class="font-medium">Free tier notice</p>
+    <p class="mt-1 text-amber-800/90 dark:text-amber-100/80">
+      This template uses a basic static HTML table. Need advanced features like virtual scrolling, column sorting,
+      pagination, and row selection? Upgrade to
+      <a href="https://base-ui.net/pricing" class="underline underline-offset-2" target="_blank" rel="noopener">
+        Base UI Pro
+      </a>
+      for the advanced <code class="text-xs">data-table</code> component.
+    </p>
+  </div>
+
+  <div class="overflow-hidden rounded-xl border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
+    <div class="overflow-x-auto">
+      <table class="min-w-full text-left text-sm">
+        <thead class="border-b border-slate-200 bg-slate-50 text-[10px] uppercase tracking-widest text-slate-500 dark:border-slate-700 dark:bg-slate-900/50 dark:text-slate-400">
+          <tr>
+            <th class="px-4 py-3 font-medium">User</th>
+            <th class="px-4 py-3 font-medium">Email</th>
+            <th class="px-4 py-3 font-medium">Role</th>
+            <th class="px-4 py-3 font-medium">Status</th>
+            <th class="px-4 py-3 font-medium text-right">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100 dark:divide-slate-700">
+          @for (user of usersService.users(); track user.id) {
+            <tr class="hover:bg-slate-50/80 dark:hover:bg-slate-900/40">
+              <td class="px-4 py-3">
+                <div class="flex items-center gap-3">
+                  <base-avatar size="sm" shape="circle" [initials]="user.initials"></base-avatar>
+                  <span class="font-medium text-slate-900 dark:text-white">{{ user.name }}</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-slate-600 dark:text-slate-300">{{ user.email }}</td>
+              <td class="px-4 py-3 text-slate-600 dark:text-slate-300">{{ user.role }}</td>
+              <td class="px-4 py-3">
+                <base-badge
+                  [color]="user.status === 'Active' ? 'success' : 'slate-light'"
+                  size="sm"
+                  shape="rectangular">
+                  {{ user.status }}
+                </base-badge>
+              </td>
+              <td class="px-4 py-3 text-right">
+                <base-dropdown-menu #actionsMenu>
+                  <base-dropdown-menu-item (click)="openEdit(user)">
+                    <base-icon name="edit" class="w-4 h-4 mr-2"></base-icon>
+                    Edit
+                  </base-dropdown-menu-item>
+                  <base-dropdown-menu-item (click)="openDelete(user)">
+                    <base-icon name="trash" class="w-4 h-4 mr-2"></base-icon>
+                    Delete
+                  </base-dropdown-menu-item>
+                </base-dropdown-menu>
+                <button
+                  type="button"
+                  base-icon-button
+                  color="transparent"
+                  size="sm"
+                  aria-label="User actions"
+                  [base-dropdown-menu-trigger]="actionsMenu"
+                  placement="end">
+                  <base-icon name="more-horisontal" class="w-4 h-4"></base-icon>
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

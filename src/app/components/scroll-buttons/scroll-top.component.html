@@ -1,0 +1,16 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<button
+  type="button"
+  base-icon-button
+  [color]="color()"
+  [size]="size()"
+  [attr.aria-label]="ariaLabel()"
+  [attr.aria-hidden]="!visible()"
+  class="shadow-lg"
+  (click)="scroll()">
+  <base-icon name="arrow-up" class="stroke-current"></base-icon>
+</button>

@@ -1,0 +1,28 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<!-- Trigger wrapper — always in DOM, inline -->
+<span #triggerSlot class="inline-block" (click)="toggle()"
+  role="button" tabindex="0"
+  [attr.aria-haspopup]="true"
+  [attr.aria-expanded]="isOpen()"
+  [attr.aria-controls]="panelId"
+  (keydown.enter)="toggle(); $event.preventDefault()"
+  (keydown.space)="toggle(); $event.preventDefault()">
+  <ng-content select="[popover-trigger]"></ng-content>
+</span>
+
+<!-- Panel — always in DOM, shown/hidden via CSS only (no @if around ng-content) -->
+<div
+  #panel
+  [id]="panelId"
+  role="dialog"
+  [attr.aria-hidden]="!isOpen()"
+  [ngStyle]="panelStyle()"
+  class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-2xl p-4"
+  (click)="$event.stopPropagation()"
+  (keydown.escape)="close()">
+  <ng-content></ng-content>
+</div>

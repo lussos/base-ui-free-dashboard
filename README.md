@@ -1,2 +1,171 @@
-# base-ui-free-dashboard
-A free, open-source SaaS Admin Dashboard template built with Angular 19+ and Tailwind CSS 4. Powered by Base UI.
+# Base UI Free Dashboard
+
+A free Angular admin dashboard template built with **Angular 22**, **Tailwind CSS 4**, and the [Base UI](https://base-ui.net) free tier.
+
+Use it as a starter for SaaS-style apps, or as a live gallery to review free Base UI components in a real shell.
+
+---
+
+## Stack
+
+| Layer | Choice |
+| --- | --- |
+| Framework | Angular 22 (standalone, zoneless-friendly patterns) |
+| Styling | Tailwind CSS 4 |
+| Components | Base UI free tier via [`base-ui-cli`](https://www.npmjs.com/package/base-ui-cli) (source copied into the repo) |
+| Icons | Base UI sprite (`public/assets/icons.svg`) |
+
+---
+
+## Features
+
+- **Auth flow** — login, register, forgot password (mocked `localStorage` auth)
+- **App shell** — free `base-app-shell` with responsive sidebar drawer and compact topbar
+- **App pages** — dashboard metrics, users CRUD with dialogs, settings with in-page `base-sidenav`
+- **Component gallery** — scroll-nav demos for primitives, forms, feedback, overlays, navigation, data display, and all 19 free form blocks
+- **Pro upsell notes** — comments where Pro widgets/layouts would extend the free shell
+
+---
+
+## Quick start
+
+**Requirements:** Node.js 22+ (24 recommended)
+
+```bash
+npm install
+npm start
+```
+
+Open [http://localhost:4200](http://localhost:4200).
+
+### Demo credentials
+
+| Field | Value |
+| --- | --- |
+| Email | `demo@base-ui.net` |
+| Password | `password` |
+
+(Any email/password works — auth is mocked.)
+
+### Other scripts
+
+```bash
+npm run build    # production build → dist/
+npm run watch    # rebuild on change
+npm test         # unit tests
+```
+
+---
+
+## App routes
+
+| Route | Description |
+| --- | --- |
+| `/login` | Sign in |
+| `/register` | Create account |
+| `/forgot-password` | Password reset request |
+| `/app/dashboard` | Overview metrics & activity |
+| `/app/users` | Users table, create/edit/delete dialogs |
+| `/app/settings` | Profile / Billing / Notifications (in-page sidenav) |
+
+---
+
+## Component gallery
+
+Browse under **Component gallery** in the sidebar (requires sign-in).
+
+| Route | Covers |
+| --- | --- |
+| `/app/ui/primitives` | Buttons, badges, chips, avatars, icons, ripple, reveal, screen size |
+| `/app/ui/forms` | Inputs, select, OTP, phone, mask, spinner, color, rating, dual-range, filter |
+| `/app/ui/feedback` | Alert, toast, progress, meter-group, counter, countdown, coming-soon |
+| `/app/ui/overlays` | Dialog, dropdown, context-menu, tooltip, popover, drawer, bottom-sheet, speed-dial |
+| `/app/ui/navigation` | Tabs, breadcrumb, accordion, stepper, scroll-to, scroll buttons |
+| `/app/ui/data-display` | Cards, stats, calendar, carousel, code, paginator, timeline, quote |
+| `/app/ui/form-blocks` | All 19 free form blocks (capped at `540px` in the demo) |
+
+Gallery pages use `base-scroll-nav` (“On this page”), content max-width **1080px**, and consistent section cards.
+
+---
+
+## Project structure
+
+```
+src/app/
+  components/          # Base UI components (CLI) + layout-app-shell
+  core/auth/           # Mock auth service + guards
+  layouts/
+    app-shell/         # Authenticated chrome
+    auth-layout/       # Login / register / forgot
+  pages/
+    dashboard|users|settings/
+    login|register|forgot-password/
+    ui/                # Component gallery
+public/assets/         # Icon sprite, static assets
+docs/                  # Extra architecture notes
+base-ui.json           # CLI config
+base-ui-lock.json      # Installed component lockfile
+```
+
+Import Base UI symbols with the path alias:
+
+```ts
+import { BaseButtonDirective, CardComponent } from 'Base';
+```
+
+Alias mapping: `"Base"` → `src/app/components/index.ts` (see `tsconfig.json`).
+
+> **Note:** Components that are themselves exported from the `Base` barrel (especially form blocks) should import their dependencies with **relative paths**, not `from 'Base'`, to avoid circular dependency errors (`NG0919`).
+
+---
+
+## Shells vs sidenav
+
+| Need | Use | Tier |
+| --- | --- | --- |
+| App chrome (sidebar + topbar + content) | `base-app-shell` (`layout-app-shell`) + `SidebarService` | Free |
+| In-page section nav (Settings, docs TOC) | `base-sidenav` | Free |
+| Nested / multi-level nav | `mega-menu`, `tree` | Pro |
+| Full opinionated dashboard page | `layout-dashboard` | Pro |
+
+Do **not** use `base-sidenav` as the primary application shell — it is for section navigation inside a page body.
+
+More detail: [docs/shells-vs-sidenav.md](docs/shells-vs-sidenav.md).
+
+---
+
+## Working with Base UI
+
+This project already has Base UI initialized. Components live under `src/app/components/` (you own the source).
+
+```bash
+# List free + pro catalog
+npx base-ui-cli list
+
+# Add a component
+npx base-ui-cli add dialog -y
+
+# Update installed components from the registry
+npx base-ui-cli update -y
+
+# Diff local vs upstream
+npx base-ui-cli diff
+```
+
+Docs & pricing: [base-ui.net](https://base-ui.net) · [Pricing](https://base-ui.net/pricing)
+
+---
+
+## Auth notes
+
+- Auth is **mocked** — no backend.
+- Session key: `localStorage` → `base-ui-dashboard-auth`
+- `authGuard` protects `/app/*`; `guestGuard` keeps signed-in users off auth pages
+
+---
+
+## License
+
+Dashboard template code in this repository is available for use in your projects.
+
+Base UI component source copied by the CLI is licensed under the [Base UI license](https://github.com/lussos/base-theme/blob/main/LICENSE.md): free-tier components are free for unlimited projects; Pro components require a license. Do not redistribute fetched component source as a standalone library or kit.

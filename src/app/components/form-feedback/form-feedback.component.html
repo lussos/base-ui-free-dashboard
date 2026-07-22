@@ -1,0 +1,41 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<base-card class="mb-8">
+        <div class="p-8 flex flex-col h-full">
+          <h3 class="text-base font-bold text-slate-900 dark:text-white mb-2 uppercase tracking-widest">Feedback
+          </h3>
+          <p class="text-xs text-slate-500 mb-8 leading-relaxed">Tell us what you think. Your feedback helps us
+            improve our products and services.</p>
+
+          <div class="flex gap-4 mb-4">
+            <base-input-group class="flex-1">
+              <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Name</base-label>
+              <input base-input placeholder="Name" />
+            </base-input-group>
+            <base-input-group class="flex-1">
+              <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Email</base-label>
+              <input base-input placeholder="Email" />
+            </base-input-group>
+          </div>
+
+          <base-input-group class="mb-4">
+            <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">What type of feedback is
+              it?</base-label>
+            <select base-input class="appearance-none w-full">
+              <option>General</option>
+            </select>
+            <base-icon base-addon-end name="chevron-down"
+              class="w-4 h-4 text-slate-400 mr-3 pointer-events-none absolute right-0 top-1/2 -translate-y-1/2"></base-icon>
+          </base-input-group>
+
+          <base-input-group class="mb-8 flex-1">
+            <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Message</base-label>
+            <textarea base-textarea rows="5" placeholder="Message"></textarea>
+          </base-input-group>
+
+          <button base-button color="primary" class="w-full py-3 mt-auto">Send Feedback</button>
+        </div>
+      </base-card>

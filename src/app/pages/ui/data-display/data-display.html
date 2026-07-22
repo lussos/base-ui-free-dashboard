@@ -1,0 +1,115 @@
+<app-showcase-page
+  title="Data display"
+  description="Cards, calendar, carousel, code blocks, paginator, timeline, and quotes."
+  [sections]="sections">
+  <app-showcase-section sectionId="stat-cards" title="Stat cards" componentName="base-stat-card">
+    <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+      <base-stat-card
+        label="MRR"
+        value="$12.4k"
+        trend="+8%"
+        [trendUp]="true"
+        icon="dollar-sign"
+        color="primary"></base-stat-card>
+      <base-stat-card
+        label="Trials"
+        value="318"
+        trend="+14%"
+        [trendUp]="true"
+        icon="users"
+        color="success"></base-stat-card>
+      <base-stat-card
+        label="Churn"
+        value="2.1%"
+        trend="-0.4%"
+        [trendUp]="true"
+        icon="trend-down"
+        color="warning"></base-stat-card>
+      <base-stat-card
+        label="NPS"
+        value="62"
+        trend="+3"
+        [trendUp]="true"
+        icon="star"
+        color="accent"></base-stat-card>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="cards" title="Cards" componentName="base-card">
+    <div class="grid gap-4 md:grid-cols-2">
+      <base-card>
+        <base-card-header class="px-4">Project update</base-card-header>
+        <base-card-body class="p-4 text-sm text-slate-600 dark:text-slate-300">
+          Ship the free dashboard template with component gallery pages for library review.
+        </base-card-body>
+        <base-card-footer class="px-4 text-xs text-slate-400">Updated 2 hours ago</base-card-footer>
+      </base-card>
+      <base-card>
+        <base-card-header class="px-4">Release notes</base-card-header>
+        <base-card-body class="p-4 text-sm text-slate-600 dark:text-slate-300">
+          Added layout-app-shell, improved mobile chrome, and expanded free-tier demos.
+        </base-card-body>
+      </base-card>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="calendar" title="Calendar" componentName="base-calendar">
+    <base-calendar mode="single"></base-calendar>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="carousel" title="Carousel" componentName="base-horizontal-carousel">
+    <base-horizontal-carousel title="Featured modules">
+      @for (item of carouselItems; track item.title) {
+        <div
+          class="flex h-28 w-full min-w-0 items-end rounded-xl p-3 text-sm font-medium text-white"
+          [class]="item.color">
+          {{ item.title }}
+        </div>
+      }
+    </base-horizontal-carousel>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="code" title="Code" componentName="base-code">
+    <base-code language="TypeScript" [showCode]="true">{{ sampleCode }}</base-code>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="paginator" title="Paginator" componentName="base-paginator">
+    <base-paginator [arrows]="true">
+      <base-p-page>1</base-p-page>
+      <base-p-page [active]="true">2</base-p-page>
+      <base-p-page>3</base-p-page>
+      <base-p-page>4</base-p-page>
+    </base-paginator>
+    <div class="mt-6">
+      <base-paginator [basePaginator]="true" [pageSizeOptions]="[10, 25, 50]" [itemsPerPage]="25"></base-paginator>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="timeline" title="Timeline" componentName="base-timeline">
+    <base-timeline>
+      <base-timeline-item color="primary" icon="check" time="Today">
+        <p class="pb-3 text-sm text-slate-700 dark:text-slate-200">Published component gallery</p>
+      </base-timeline-item>
+      <base-timeline-item color="success" icon="user-plus" time="Yesterday">
+        <p class="pb-3 text-sm text-slate-700 dark:text-slate-200">Invited 4 teammates</p>
+      </base-timeline-item>
+      <base-timeline-item color="accent" icon="edit" time="Mon" [last]="true">
+        <p class="text-sm text-slate-700 dark:text-slate-200">Updated billing plan</p>
+      </base-timeline-item>
+    </base-timeline>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="avatar-group" title="Avatar group" componentName="base-avatar-group">
+    <base-avatar-group [items]="team" [max]="4" size="md"></base-avatar-group>
+    <div class="mt-4 flex items-center gap-2">
+      <base-avatar size="sm" shape="circle" initials="YOU" status="active"></base-avatar>
+      <span class="text-sm text-slate-600 dark:text-slate-300">You + 4 collaborators</span>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="quote" title="Quote" componentName="base-quote">
+    <base-quote variant="border-left" authorName="Alex Rivera" authorRole="Product Lead">
+      Base UI lets us ship Angular dashboards fast without fighting a closed component library.
+    </base-quote>
+  </app-showcase-section>
+</app-showcase-page>

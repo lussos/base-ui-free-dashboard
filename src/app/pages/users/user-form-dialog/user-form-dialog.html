@@ -1,0 +1,39 @@
+<base-dialog [width]="520">
+  <base-dialog-header>{{ isEdit ? 'Edit User' : 'Add User' }}</base-dialog-header>
+  <base-dialog-body>
+    <form id="user-form" class="space-y-4 p-1" (ngSubmit)="save()">
+      <base-input-group>
+        <base-label>Name</base-label>
+        <input base-input name="name" [(ngModel)]="name" placeholder="Full name" required />
+      </base-input-group>
+      <base-input-group>
+        <base-label>Email</base-label>
+        <input base-input name="email" type="email" [(ngModel)]="email" placeholder="Email" required />
+      </base-input-group>
+      <div class="grid gap-4 sm:grid-cols-2">
+        <base-input-group>
+          <base-label>Role</base-label>
+          <select base-input name="role" [(ngModel)]="role">
+            @for (roleOption of roles; track roleOption) {
+              <option [value]="roleOption">{{ roleOption }}</option>
+            }
+          </select>
+        </base-input-group>
+        <base-input-group>
+          <base-label>Status</base-label>
+          <select base-input name="status" [(ngModel)]="status">
+            @for (statusOption of statuses; track statusOption) {
+              <option [value]="statusOption">{{ statusOption }}</option>
+            }
+          </select>
+        </base-input-group>
+      </div>
+    </form>
+  </base-dialog-body>
+  <base-dialog-footer>
+    <button type="button" base-stroked-button color="default" base-dialog-close>Cancel</button>
+    <button type="submit" form="user-form" base-button color="primary">
+      {{ isEdit ? 'Save Changes' : 'Create User' }}
+    </button>
+  </base-dialog-footer>
+</base-dialog>

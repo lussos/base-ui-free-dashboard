@@ -1,0 +1,12 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<base-input-group>
+  <input base-input type="text" [attr.list]="suggestions()" placeholder="Start typing...">
+  <base-icon name="chevron-down" base-addon-end class="mr-3 w-4 h-4 stroke-slate-500"></base-icon>
+  <datalist [attr.id]="suggestions()">
+    <ng-content></ng-content>
+  </datalist>
+</base-input-group>

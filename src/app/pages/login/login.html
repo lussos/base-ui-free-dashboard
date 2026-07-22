@@ -1,0 +1,41 @@
+<!-- Uses the free form-login block pattern (card + inputs + checkbox + button). -->
+<!-- Building a complex multi-step onboarding flow after registration? Check out the Pro layout-onboarding-flow and form-wizard blocks. -->
+<base-card>
+  <form class="p-8 flex flex-col h-full" (ngSubmit)="submit()">
+    <h2 class="font-bold text-sm text-slate-900 dark:text-white mb-6 uppercase tracking-widest text-center">
+      Login
+    </h2>
+
+    <base-input-group class="mb-4">
+      <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Email address</base-label>
+      <input base-input name="email" type="email" [(ngModel)]="email" placeholder="Email address" required />
+    </base-input-group>
+
+    <base-input-group class="mb-4">
+      <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Password</base-label>
+      <input
+        base-input
+        name="password"
+        type="password"
+        [(ngModel)]="password"
+        placeholder="Password"
+        required />
+    </base-input-group>
+
+    <div class="flex items-center justify-between mb-6">
+      <base-checkbox class="text-xs text-slate-500">Keep me logged in</base-checkbox>
+      <a
+        routerLink="/forgot-password"
+        class="!text-[10px] uppercase !font-light !tracking-[2px] text-slate-400 hover:text-slate-600 transition-colors">
+        Forgot password?
+      </a>
+    </div>
+
+    <button base-button color="primary" type="submit" class="w-full py-3 mb-6 mt-auto">Sign In</button>
+
+    <p class="text-center text-[10px] uppercase font-light text-slate-400 tracking-widest">
+      Don't have an account?
+      <a routerLink="/register" class="text-slate-900 dark:text-white">Sign up</a>
+    </p>
+  </form>
+</base-card>

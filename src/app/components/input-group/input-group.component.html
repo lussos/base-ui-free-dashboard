@@ -1,0 +1,25 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<ng-content select="base-label"></ng-content>
+<div [class]="getWrapperClasses()">
+  <div class="flex items-center empty:hidden">
+    <ng-content select="[base-addon-start]" #addon></ng-content>
+  </div>
+  <ng-content select="datalist"></ng-content>
+
+  <div class="text-sm w-full h-full border-0 bg-transparent outline-none flex-1">
+    <ng-content select="[base-input]"></ng-content>
+    <ng-content select="[base-textarea]"></ng-content>
+    <ng-content select="base-mention-input"></ng-content>
+  </div>
+  <div class="flex items-center empty:hidden">
+    <ng-content select="[base-addon-end]"></ng-content>
+  </div>
+</div>
+@if (showErrors()) {
+<ng-content select="base-error"></ng-content>
+}
+<ng-content select="base-info-text"></ng-content>

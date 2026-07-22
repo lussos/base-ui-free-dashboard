@@ -1,0 +1,11 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<label [class]="containerClasses()">
+  <input type="checkbox" role="switch" class="w-0 h-0 opacity-0 peer" [disabled]="disabled()" [checked]="checked()"
+    [attr.aria-label]="ariaLabel()" (change)="onToggle($event)" />
+  <span [class]="trackClasses()" class="peer-focus-visible:ring-2 peer-focus-visible:ring-blue-500 peer-focus-visible:ring-offset-2 rounded-full"></span>
+  <span [class]="thumbClasses()"></span>
+</label>

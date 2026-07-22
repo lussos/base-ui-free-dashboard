@@ -1,0 +1,167 @@
+<app-showcase-page
+  title="Forms"
+  description="Inputs, selects, OTP, phone, masks, ratings, and sliders."
+  [sections]="sections">
+  <app-showcase-section sectionId="input-group" title="Input group" componentName="base-input-group">
+    <div class="grid gap-4 sm:grid-cols-2">
+      <base-input-group>
+        <base-label>Email</base-label>
+        <input base-input type="email" [(ngModel)]="email" placeholder="you@example.com" />
+      </base-input-group>
+      <base-input-group>
+        <base-label>Verified email</base-label>
+        <input base-input type="email" value="demo@base-ui.net" />
+        <base-icon base-addon-end name="check-circle" class="w-4 h-4 stroke-green-500"></base-icon>
+      </base-input-group>
+      <base-input-group class="sm:col-span-2">
+        <base-label>Bio</base-label>
+        <textarea base-textarea rows="3" [(ngModel)]="bio"></textarea>
+      </base-input-group>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="floating-input" title="Floating input" componentName="base-floating-input">
+    <div class="grid max-w-2xl gap-4 sm:grid-cols-2">
+      <base-floating-input label="Full name"></base-floating-input>
+      <base-floating-input label="Company"></base-floating-input>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="select" title="Select" componentName="base-select">
+    <base-select class="max-w-xs" [(ngModel)]="country" placeholder="Country">
+      <option value="us">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="de">Germany</option>
+      <option value="bg">Bulgaria</option>
+    </base-select>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="custom-select" title="Custom select" componentName="base-custom-select">
+    <base-custom-select
+      class="max-w-xs"
+      label="Role"
+      [(ngModel)]="role"
+      [options]="roleOptions"
+      displayKey="label"
+      valueKey="value"></base-custom-select>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="choices"
+    title="Radio, checkbox & toggle"
+    componentName="base-radio-group / base-checkbox / base-toggle">
+    <base-radio-group groupLabel="Plan" [(ngModel)]="plan" class="flex flex-col gap-2 sm:flex-row sm:gap-6">
+      <base-radio-button value="starter">Starter</base-radio-button>
+      <base-radio-button value="pro">Pro</base-radio-button>
+      <base-radio-button value="enterprise">Enterprise</base-radio-button>
+    </base-radio-group>
+    <div class="flex flex-wrap items-center gap-6">
+      <base-checkbox [(ngModel)]="newsletter">Email me product updates</base-checkbox>
+      <base-toggle [(ngModel)]="newsletter" color="primary">Notifications</base-toggle>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="tri-state"
+    title="Tri-state checkbox"
+    description="Cycles unchecked → checked → indeterminate."
+    componentName="base-tri-state-checkbox">
+    <base-tri-state-checkbox [(ngModel)]="triState" color="primary">Include archived</base-tri-state-checkbox>
+    <p class="text-xs text-slate-500">State: {{ triState }}</p>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="otp" title="OTP input" componentName="base-otp-input">
+    <base-otp-input [(ngModel)]="otp" [length]="6"></base-otp-input>
+    <p class="text-xs text-slate-500">Value: {{ otp || '—' }}</p>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="phone" title="Phone input" componentName="base-phone-input">
+    <base-phone-input class="max-w-sm" [(ngModel)]="phone"></base-phone-input>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="password" title="Password strength" componentName="base-password-strength">
+    <base-input-group class="max-w-sm">
+      <base-label>Password</base-label>
+      <input base-input type="password" [(ngModel)]="password" placeholder="Enter a password" />
+    </base-input-group>
+    <base-password-strength class="mt-3 max-w-sm" [password]="password"></base-password-strength>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="mask"
+    title="Input mask"
+    description="Tokens: 0 digit, A letter, S alphanumeric."
+    componentName="baseMask">
+    <base-input-group class="max-w-xs">
+      <base-label>Card number</base-label>
+      <input base-input baseMask="0000 0000 0000 0000" placeholder="ACCT-000003" />
+    </base-input-group>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="spinner" title="Input spinner" componentName="base-input-spinner">
+    <base-input-spinner class="max-w-32" [(ngModel)]="quantity" [min]="1" [max]="20"></base-input-spinner>
+    <p class="text-xs text-slate-500">Quantity: {{ quantity }}</p>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="autocomplete" title="Autocomplete" componentName="base-input-autocomplete">
+    <base-input-autocomplete class="max-w-sm" suggestions="country-list">
+      <option value="United States"></option>
+      <option value="United Kingdom"></option>
+      <option value="Germany"></option>
+      <option value="Bulgaria"></option>
+      <option value="Canada"></option>
+    </base-input-autocomplete>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="color-picker" title="Color picker" componentName="base-color-picker">
+    <div class="flex items-center gap-3">
+      <base-color-picker [(ngModel)]="brandColor"></base-color-picker>
+      <code class="text-xs text-slate-500">{{ brandColor }}</code>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="star-rating" title="Star rating" componentName="base-star-rating">
+    <base-star-rating ariaLabel="Product rating">
+      <base-star [(rating)]="rating" [editable]="true"></base-star>
+    </base-star-rating>
+    <p class="text-xs text-slate-500">Rating: {{ rating }} / 5</p>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="range-slider" title="Range slider" componentName="base-range-slider">
+    <base-range-slider
+      class="max-w-md"
+      [(ngModel)]="volume"
+      [showValue]="true"
+      [showMinMax]="true"
+      color="primary"
+      ariaLabel="Volume"></base-range-slider>
+    <p class="text-xs text-slate-500">Value: {{ volume }}</p>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="dual-range" title="Dual range slider" componentName="base-dual-range-slider">
+    <base-dual-range-slider
+      class="max-w-md"
+      [(ngModel)]="priceRange"
+      [showValue]="true"
+      [showMinMax]="true"
+      color="accent"
+      ariaLabel="Price range"></base-dual-range-slider>
+    <p class="text-xs text-slate-500">{{ priceRange.start }} – {{ priceRange.end }}</p>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="filter-pipe"
+    title="Filter pipe"
+    description="Client-side list filtering."
+    componentName="filter">
+    <base-input-group class="mb-3 max-w-sm">
+      <base-label>Search people</base-label>
+      <input base-input [(ngModel)]="filterQuery" placeholder="Name or email" />
+    </base-input-group>
+    <ul class="space-y-1 text-sm text-slate-600 dark:text-slate-300">
+      @for (person of people | filter: filterQuery: ['name', 'email']; track person.email) {
+        <li>{{ person.name }} · {{ person.email }}</li>
+      }
+    </ul>
+  </app-showcase-section>
+</app-showcase-page>

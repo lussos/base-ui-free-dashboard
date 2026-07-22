@@ -1,0 +1,23 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<span [class]="chipClasses()"
+  [attr.role]="disabled() ? null : 'button'"
+  [attr.tabindex]="disabled() ? null : 0"
+  [attr.aria-pressed]="active()"
+  (click)="handleClick()"
+  (keydown.enter)="handleClick(); $event.preventDefault()"
+  (keydown.space)="handleClick(); $event.preventDefault()">
+  @if (icon()) {
+  <base-icon [name]="icon()!" [class]="iconClasses()" aria-hidden="true"></base-icon>
+  }
+  <ng-content></ng-content>
+  @if (removable()) {
+  <button type="button" class="flex items-center justify-center focus:outline-none" (click)="handleRemove($event)"
+    [attr.aria-label]="removeLabel()">
+    <base-icon name="close" [class]="closeIconClasses()" aria-hidden="true"></base-icon>
+  </button>
+  }
+</span>

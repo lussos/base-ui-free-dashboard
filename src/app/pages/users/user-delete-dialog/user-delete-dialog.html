@@ -1,0 +1,13 @@
+<base-dialog [width]="420">
+  <base-dialog-header>Delete User</base-dialog-header>
+  <base-dialog-body>
+    <p class="text-sm text-slate-600 dark:text-slate-300">
+      Are you sure you want to delete
+      <span class="font-semibold text-slate-900 dark:text-white">{{ user.name }}</span>? This action cannot be undone.
+    </p>
+  </base-dialog-body>
+  <base-dialog-footer>
+    <button type="button" base-stroked-button color="default" base-dialog-close>Cancel</button>
+    <button type="button" base-button color="danger" (click)="confirm()">Delete</button>
+  </base-dialog-footer>
+</base-dialog>

@@ -1,0 +1,49 @@
+<div class="min-h-screen grid lg:grid-cols-2 bg-slate-50 dark:bg-slate-950">
+  <aside
+    class="relative hidden lg:flex flex-col justify-between overflow-hidden bg-slate-900 text-white p-10 xl:p-14">
+    <div
+      class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(59,130,246,0.35),transparent_55%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.25),transparent_45%)]">
+    </div>
+    <div class="relative z-10">
+      <div class="flex items-center gap-3">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-500 text-white">
+          <base-icon name="layout-grid" class="w-5 h-5 stroke-white"></base-icon>
+        </span>
+        <div>
+          <p class="text-lg font-semibold tracking-tight">Base UI</p>
+          <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Free Dashboard</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative z-10 max-w-md space-y-4">
+      <h1 class="text-4xl font-semibold tracking-tight leading-tight">
+        A realistic Angular starter built with free Base UI components.
+      </h1>
+      <p class="text-slate-300 text-sm leading-relaxed">
+        Auth flow, app shell, dashboard metrics, users CRUD, and settings — all composed from the free tier so you can
+        feel the product before upgrading.
+      </p>
+    </div>
+
+    <p class="relative z-10 text-xs uppercase tracking-[0.18em] text-slate-500">
+      Open source · Tailwind · Angular
+    </p>
+  </aside>
+
+  <main class="flex min-h-screen items-center justify-center p-6 sm:p-10">
+    <div class="w-full max-w-md">
+      <div class="mb-8 flex items-center gap-3 lg:hidden">
+        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-blue-500 text-white">
+          <base-icon name="layout-grid" class="w-4 h-4 stroke-white"></base-icon>
+        </span>
+        <div>
+          <p class="font-semibold text-slate-900 dark:text-white">Base UI</p>
+          <p class="text-[10px] uppercase tracking-[0.2em] text-slate-400">Free Dashboard</p>
+        </div>
+      </div>
+      <router-outlet />
+      <!-- Building a complex multi-step onboarding flow after registration? Check out the Pro layout-onboarding-flow and form-wizard blocks. -->
+    </div>
+  </main>
+</div>

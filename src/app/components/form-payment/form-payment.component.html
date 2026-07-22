@@ -1,0 +1,66 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<base-card class="mb-8">
+        <div class="flex justify-between items-center px-6 py-4 border-b border-slate-100 dark:border-slate-800">
+          <h3 class="font-bold text-sm text-slate-900 dark:text-white">Payment Info</h3>
+          <div class="flex gap-2 items-center">
+            <base-icon name="check-circle" class="w-4 h-4 stroke-green-500"></base-icon>
+            <base-icon name="check-circle" class="w-4 h-4 stroke-slate-900 dark:stroke-white"></base-icon>
+            <div
+              class="w-4 h-4 rounded-full border border-slate-200 dark:border-slate-700 flex items-center justify-center text-[10px] font-bold text-slate-400">
+              3</div>
+          </div>
+        </div>
+        <base-card-body class="p-6 flex flex-col flex-1">
+          <div class="flex gap-4 mb-6">
+            <button
+              class="flex-1 py-4 rounded-[12px] border border-blue-500 dark:border-white flex items-center justify-center">
+              <span class="text-blue-600 font-bold italic text-lg">VISA</span>
+            </button>
+            <button
+              class="flex-1 py-4 rounded-[12px] border border-slate-200 dark:border-slate-700 flex items-center justify-center opacity-50">
+              <span class="text-blue-800 font-bold italic text-lg">PayPal</span>
+            </button>
+          </div>
+
+          <p class="text-xs text-slate-500 mb-8 leading-relaxed">Safe money transfer using your bank account.
+            Visa, Maestro, Discover...</p>
+
+          <base-input-group class="mb-4">
+            <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Cardholder
+              Name</base-label>
+            <input base-input placeholder="Full name" />
+          </base-input-group>
+
+          <base-input-group class="mb-4">
+            <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Card Number</base-label>
+            <input base-input placeholder="•••• •••• •••• ••••" />
+          </base-input-group>
+
+          <div class="flex gap-4 mb-8">
+            <base-input-group class="inline-block">
+              <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Expiry Date</base-label>
+              <input base-input placeholder="MM / YY" />
+            </base-input-group>
+            <base-input-group class="inline-block">
+              <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">CVV</base-label>
+              <input base-input placeholder="CVV" />
+            </base-input-group>
+          </div>
+
+          <div class="flex gap-4 mt-auto ">
+            <div class="flex-1">
+              <button base-stroked-button color="primary" class="py-3">
+                <base-icon name="arrow-left" class="-ml-2"></base-icon>
+                Back
+              </button>
+            </div>
+            <div class="flex-1">
+              <button base-button color="primary" class="py-3 w-full">Pay Now</button>
+            </div>
+          </div>
+        </base-card-body>
+      </base-card>

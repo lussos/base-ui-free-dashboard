@@ -1,0 +1,42 @@
+<!-- Uses the free form-signup block pattern. -->
+<base-card>
+  <form class="p-8 flex flex-col h-full" (ngSubmit)="submit()">
+    <h2 class="font-bold text-sm text-slate-900 dark:text-white mb-6 uppercase tracking-widest text-center">
+      Sign Up
+    </h2>
+
+    <div class="flex gap-4 mb-4">
+      <base-input-group class="flex-1">
+        <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">First Name</base-label>
+        <input base-input name="firstName" [(ngModel)]="firstName" placeholder="First Name" />
+      </base-input-group>
+      <base-input-group class="flex-1">
+        <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Last Name</base-label>
+        <input base-input name="lastName" [(ngModel)]="lastName" placeholder="Last Name" />
+      </base-input-group>
+    </div>
+
+    <base-input-group class="mb-4">
+      <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Email address</base-label>
+      <input base-input name="email" type="email" [(ngModel)]="email" placeholder="Email address" required />
+    </base-input-group>
+
+    <base-input-group class="mb-6">
+      <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Password</base-label>
+      <input
+        base-input
+        name="password"
+        type="password"
+        [(ngModel)]="password"
+        placeholder="Password"
+        required />
+    </base-input-group>
+
+    <button base-button color="primary" type="submit" class="w-full py-3 mb-6 mt-auto">Sign Up</button>
+
+    <p class="text-center text-[10px] uppercase font-light text-slate-400 tracking-widest">
+      Already have an account?
+      <a routerLink="/login" class="text-slate-900 dark:text-white">Log in</a>
+    </p>
+  </form>
+</base-card>

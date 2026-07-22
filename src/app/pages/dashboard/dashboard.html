@@ -1,0 +1,153 @@
+<!-- Building a complex data dashboard? Base UI Pro includes 15 ready-to-use page layouts including layout-dashboard and media-widget-xxx blocks. -->
+<div class="space-y-4 sm:space-y-6">
+  <div class="grid gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-4">
+    <base-stat-card
+      label="Total Revenue"
+      value="$48,295"
+      trend="+12.5%"
+      [trendUp]="true"
+      icon="dollar-sign"
+      color="primary"
+      caption="vs last month"></base-stat-card>
+    <base-stat-card
+      label="Active Users"
+      value="2,847"
+      trend="+5.2%"
+      [trendUp]="true"
+      icon="users"
+      color="success"
+      caption="vs last month"></base-stat-card>
+    <base-stat-card
+      label="Sales"
+      value="1,204"
+      trend="-2.1%"
+      [trendUp]="false"
+      icon="cart"
+      color="warning"
+      caption="vs last month"></base-stat-card>
+    <base-stat-card
+      label="Conversion Rate"
+      value="3.24%"
+      trend="+0.8%"
+      [trendUp]="true"
+      icon="percent"
+      color="accent"
+      caption="vs last month"></base-stat-card>
+  </div>
+
+  <div class="grid gap-4 lg:grid-cols-3 lg:gap-6">
+    <base-card class="lg:col-span-2">
+      <base-card-header class="flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 border-b border-slate-100 dark:border-slate-700">
+        <div>
+          <h2 class="text-sm font-semibold uppercase tracking-widest text-slate-900 dark:text-white">
+            Revenue Overview
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">Mock chart styled with Tailwind</p>
+        </div>
+        <base-icon name="line-chart" class="w-5 h-5 stroke-slate-400"></base-icon>
+      </base-card-header>
+      <base-card-body class="p-4 sm:p-6">
+        <div class="h-48 w-full sm:h-64" role="img" aria-label="Revenue chart for the last 12 months">
+          <svg viewBox="0 0 480 220" class="h-full w-full" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="revenueFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgb(59 130 246)" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="rgb(59 130 246)" stop-opacity="0.02" />
+              </linearGradient>
+            </defs>
+            <line
+              x1="0"
+              y1="40"
+              x2="480"
+              y2="40"
+              class="stroke-slate-200 dark:stroke-slate-700"
+              stroke-width="1" />
+            <line
+              x1="0"
+              y1="100"
+              x2="480"
+              y2="100"
+              class="stroke-slate-200 dark:stroke-slate-700"
+              stroke-width="1" />
+            <line
+              x1="0"
+              y1="160"
+              x2="480"
+              y2="160"
+              class="stroke-slate-200 dark:stroke-slate-700"
+              stroke-width="1" />
+            <path
+              d="M0,180 L40,150 L80,165 L120,110 L160,130 L200,78 L240,95 L280,55 L320,78 L360,38 L400,62 L440,28 L480,45 L480,220 L0,220 Z"
+              fill="url(#revenueFill)" />
+            <path
+              d="M0,180 L40,150 L80,165 L120,110 L160,130 L200,78 L240,95 L280,55 L320,78 L360,38 L400,62 L440,28 L480,45"
+              fill="none"
+              stroke="rgb(59 130 246)"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div class="mt-4 flex justify-between text-[10px] uppercase tracking-widest text-slate-400">
+          <span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span><span>Nov</span>
+        </div>
+      </base-card-body>
+    </base-card>
+
+    <base-card>
+      <base-card-header class="flex items-center justify-between border-b border-slate-100 px-4 py-3 dark:border-slate-700 sm:px-6 sm:py-4">
+        <h2 class="text-sm font-semibold uppercase tracking-widest text-slate-900 dark:text-white">
+          Recent Activity
+        </h2>
+      </base-card-header>
+      <base-card-body class="p-4 sm:p-6">
+        <base-timeline>
+          <base-timeline-item color="primary" icon="user-plus" time="2m ago">
+            <div class="flex items-start gap-3 pb-4">
+              <base-avatar size="sm" shape="circle" initials="SM"></base-avatar>
+              <div>
+                <p class="text-sm text-slate-800 dark:text-slate-100">
+                  <span class="font-medium">Sarah Mitchell</span> joined the workspace
+                </p>
+                <p class="text-xs text-slate-400 mt-0.5">Assigned Admin role</p>
+              </div>
+            </div>
+          </base-timeline-item>
+          <base-timeline-item color="success" icon="check" time="18m ago">
+            <div class="flex items-start gap-3 pb-4">
+              <base-avatar size="sm" shape="circle" initials="JC"></base-avatar>
+              <div>
+                <p class="text-sm text-slate-800 dark:text-slate-100">
+                  <span class="font-medium">James Carter</span> closed a deal
+                </p>
+                <p class="text-xs text-slate-400 mt-0.5">$4,200 · Acme Corp</p>
+              </div>
+            </div>
+          </base-timeline-item>
+          <base-timeline-item color="warning" icon="bell" time="1h ago">
+            <div class="flex items-start gap-3 pb-4">
+              <base-avatar size="sm" shape="circle" initials="PP"></base-avatar>
+              <div>
+                <p class="text-sm text-slate-800 dark:text-slate-100">
+                  <span class="font-medium">Priya Patel</span> updated billing
+                </p>
+                <p class="text-xs text-slate-400 mt-0.5">Switched to Pro plan</p>
+              </div>
+            </div>
+          </base-timeline-item>
+          <base-timeline-item color="accent" icon="edit" time="3h ago" [last]="true">
+            <div class="flex items-start gap-3">
+              <base-avatar size="sm" shape="circle" initials="NK"></base-avatar>
+              <div>
+                <p class="text-sm text-slate-800 dark:text-slate-100">
+                  <span class="font-medium">Noah Kim</span> edited a user profile
+                </p>
+                <p class="text-xs text-slate-400 mt-0.5">Role changed to Editor</p>
+              </div>
+            </div>
+          </base-timeline-item>
+        </base-timeline>
+      </base-card-body>
+    </base-card>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "$schema": "https://base-ui.net/schema.json",
+  "style": "scss",
+  "tailwind": {
+    "config": "src/tailwind.css",
+    "css": "src/styles.scss",
+    "baseColor": "slate",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "src/app/components",
+    "utils": "src/app/utils"
+  }
+}

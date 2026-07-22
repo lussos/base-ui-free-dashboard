@@ -1,0 +1,54 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<svg
+  viewBox="0 0 1160 200"
+  class="h-5 w-auto"
+  role="img"
+  [attr.aria-label]="editable() ? 'Rate ' + rating() + ' out of 5 stars' : rating() + ' out of 5 stars'"
+  [attr.aria-hidden]="editable() ? null : true"
+  [class.cursor-pointer]="editable()"
+  [attr.tabindex]="editable() ? 0 : null"
+  (keydown.arrowleft)="editable() && changeRating(Math.max(1, Math.ceil(rating()) - 1))"
+  (keydown.arrowright)="editable() && changeRating(Math.min(5, Math.floor(rating()) + 1))"
+  >
+  <defs>
+    <polygon
+      id="star"
+      points="100,0 131,66 200,76 150,128 162,200 100,166 38,200 50,128 0,76 69,66 "
+      />
+
+    <clipPath id="stars">
+      @for (rating of ratings; track rating) {
+        <use
+          href="#star"
+          [attr.x]="rating.x"
+          />
+      }
+    </clipPath>
+  </defs>
+  <rect class="fill-slate-300 w-full h-full" clip-path="url(#stars)"></rect>
+
+  <rect
+    class="h-full fill-[#FFB800]"
+    [style.width]="fillWidth()"
+    clip-path="url(#stars)"
+    #startRect
+  ></rect>
+  @for (rating of ratings; track rating) {
+    <rect
+      class="clickable-star"
+      [attr.x]="rating.x"
+      y="0"
+      (click)="changeRating(rating.val)"
+      (keydown.enter)="changeRating(rating.val)"
+      width="200"
+      height="100%"
+      fill="transparent"
+      [attr.aria-label]="editable() ? 'Rate ' + rating.val + ' stars' : null"
+      [attr.tabindex]="editable() ? -1 : null"
+      />
+  }
+</svg>

@@ -1,0 +1,39 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<!-- With icon -->
+@if (link() && icon()) {
+  <a
+    [href]="link()"
+    class="peer dark:text-slate-200 hover:!text-blue-500 cursor-pointer pointer-events-auto"
+    >
+    <label class="cursor-pointer">{{ label() }}</label>
+  </a>
+  <base-icon
+    [name]="icon() || ''"
+    class="w-4 h-4 min-w-4 stroke-slate-800 dark:stroke-slate-200 peer-hover:!stroke-blue-500 -mr-1.5 order-first"
+  ></base-icon>
+}
+
+@if (!link() && icon()) {
+  <label class="text-slate-500">{{ label() }}</label>
+  <base-icon
+    [name]="icon() || ''"
+    class="w-4 h-4 min-w-4 stroke-slate-500 peer-hover:!stroke-blue-500 -mr-1.5 order-first"
+  ></base-icon>
+}
+<!-- Without icon -->
+@if (link() && !icon()) {
+  <a
+    [href]="link()"
+    class="peer hover:text-blue-500 cursor-pointer pointer-events-auto"
+    >
+  <label class="cursor-pointer">{{ label() }}</label>
+</a>
+}
+
+@if (!link() && !icon()) {
+  <span class="text-slate-500 font-light" aria-current="page">{{ label() }}</span>
+}

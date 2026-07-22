@@ -1,0 +1,48 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<div class="calendar-container">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-4 px-2">
+        <h3 class="text-sm font-semibold text-slate-900 dark:text-white !m-0" id="base-calendar-month-label">
+            {{ months[viewDate.getMonth()] }} {{ viewDate.getFullYear() }}
+        </h3>
+        <div class="flex gap-1">
+            <button base-icon-button color="transparent" size="sm" (click)="prevMonth()"
+                aria-label="Previous month" title="Previous month">
+                <base-icon name="chevron-left" class="w-4 h-4 stroke-slate-500 hover:stroke-blue-500" aria-hidden="true"></base-icon>
+            </button>
+            <button base-icon-button color="transparent" size="sm" (click)="nextMonth()"
+                aria-label="Next month" title="Next month">
+                <base-icon name="chevron-right" class="w-4 h-4 stroke-slate-500 hover:stroke-blue-500" aria-hidden="true"></base-icon>
+            </button>
+        </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-7 gap-x-0 gap-y-1" role="grid" [id]="panelId()" aria-labelledby="base-calendar-month-label"
+        (keydown)="onGridKeydown($event)">
+        <!-- Weekdays -->
+        @for (day of weekDays; track day) {
+        <div role="columnheader" aria-hidden="true"
+            class="h-8 flex items-center justify-center text-[10px] uppercase font-bold text-slate-400 dark:text-slate-500">
+            {{ day }}
+        </div>
+        }
+
+        <!-- Days -->
+        @for (calDate of days; track calDate.date.getTime()) {
+        <div role="gridcell" [attr.tabindex]="dayTabIndex(calDate)"
+            [attr.aria-label]="dayAriaLabel(calDate)"
+            [attr.aria-selected]="calDate.isSelected || calDate.isRangeStart || calDate.isRangeEnd || calDate.isInRange"
+            [attr.aria-current]="calDate.isToday ? 'date' : null"
+            (click)="selectDate(calDate)" [class]="getCellClasses(calDate)">
+            <span [class]="getDayClasses(calDate)">
+                {{ calDate.date.getDate() }}
+            </span>
+        </div>
+        }
+    </div>
+</div>

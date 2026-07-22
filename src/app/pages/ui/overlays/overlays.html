@@ -1,0 +1,100 @@
+<app-showcase-page
+  title="Overlays"
+  description="Dialogs, menus, tooltips, drawers, bottom sheets, and speed dial."
+  [sections]="sections">
+  <app-showcase-section sectionId="dialog" title="Dialog" componentName="DialogService / base-dialog">
+    <button type="button" base-button color="primary" (click)="openDialog()">Open dialog</button>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="dropdown" title="Dropdown menu" componentName="base-dropdown-menu">
+    <base-dropdown-menu #menu>
+      <base-dropdown-menu-item>
+        <base-icon name="user" class="w-4 h-4 mr-2"></base-icon>
+        Profile
+      </base-dropdown-menu-item>
+      <base-dropdown-menu-item>
+        <base-icon name="settings" class="w-4 h-4 mr-2"></base-icon>
+        Settings
+      </base-dropdown-menu-item>
+      <base-dropdown-menu-item>
+        <base-icon name="arrow-out" class="w-4 h-4 mr-2"></base-icon>
+        Sign out
+      </base-dropdown-menu-item>
+    </base-dropdown-menu>
+    <button type="button" base-button color="default" [base-dropdown-menu-trigger]="menu">
+      Open menu
+      <base-icon name="chevron-down" class="w-4 h-4"></base-icon>
+    </button>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="context-menu"
+    title="Context menu"
+    description="Right-click the panel."
+    componentName="base-context-menu">
+    <base-context-menu #ctx>
+      <button type="button" base-context-menu-item>Copy</button>
+      <button type="button" base-context-menu-item>Rename</button>
+      <button type="button" base-context-menu-item>Delete</button>
+    </base-context-menu>
+    <div
+      class="rounded-xl border border-dashed border-slate-300 bg-slate-50 p-8 text-center text-sm text-slate-500 dark:border-slate-600 dark:bg-slate-800/40"
+      [base-context-menu-trigger]="ctx">
+      Right-click here
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="tooltip" title="Tooltip" componentName="base-tooltip">
+    <button type="button" base-stroked-button color="primary" base-tooltip="Helpful tip on hover" placement="top">
+      Hover me
+    </button>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="popover" title="Popover" componentName="base-popover">
+    <base-popover placement="bottom-start">
+      <button type="button" popover-trigger base-button color="accent">Open popover</button>
+      <div class="w-56 space-y-2">
+        <p class="text-sm font-medium text-slate-900 dark:text-white">Quick tip</p>
+        <p class="text-xs text-slate-500">Popover content stays in a floating panel above the page.</p>
+      </div>
+    </base-popover>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="drawer" title="Drawer" componentName="base-drawer">
+    <base-drawer #drawer position="right" class="w-80 p-6">
+      <h3 class="mb-2 text-sm font-semibold uppercase tracking-widest">Drawer panel</h3>
+      <p class="text-sm text-slate-500">Slide-in panel for filters, details, or secondary actions.</p>
+    </base-drawer>
+    <button type="button" base-button color="primary" [base-drawer]="drawer">Open drawer</button>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="bottom-sheet"
+    title="Bottom sheet"
+    description="Great on mobile."
+    componentName="base-bottom-sheet">
+    <button type="button" base-button color="default" (click)="sheetOpen.set(true)">Open bottom sheet</button>
+    <base-bottom-sheet [(open)]="sheetOpen" [showClose]="true" sheetLabel="Demo sheet">
+      <div class="space-y-3 p-2">
+        <h3 class="text-sm font-semibold text-slate-900 dark:text-white">Mobile-friendly sheet</h3>
+        <p class="text-sm text-slate-500">Drag down or tap outside to dismiss.</p>
+        <button type="button" base-button color="primary" (click)="sheetOpen.set(false)">Done</button>
+      </div>
+    </base-bottom-sheet>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="speed-dial"
+    title="Speed dial"
+    description="Absolute within this card (not fixed to the viewport)."
+    componentName="base-speed-dial">
+    <div class="relative h-48 rounded-xl border border-slate-200 bg-slate-50 dark:border-slate-700 dark:bg-slate-800/40">
+      <base-speed-dial
+        [actions]="dialActions"
+        [fixed]="false"
+        [showLabels]="true"
+        position="bottom-right"
+        direction="up"></base-speed-dial>
+    </div>
+  </app-showcase-section>
+</app-showcase-page>

@@ -1,0 +1,133 @@
+<app-showcase-page
+  title="Primitives"
+  description="Buttons, badges, chips, avatars, icons, dividers, and motion helpers."
+  [sections]="sections">
+  <app-showcase-section
+    sectionId="buttons"
+    title="Buttons"
+    description="Solid, stroked, and icon variants."
+    componentName="base-button">
+    <div class="flex flex-wrap gap-2">
+      <button type="button" base-button color="primary">Primary</button>
+      <button type="button" base-button color="success">Success</button>
+      <button type="button" base-button color="danger">Danger</button>
+      <button type="button" base-button color="warning">Warning</button>
+      <button type="button" base-button color="accent">Accent</button>
+      <button type="button" base-button color="default">Default</button>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <button type="button" base-stroked-button color="primary">Stroked</button>
+      <button type="button" base-stroked-button color="danger">Stroked danger</button>
+      <button type="button" base-button color="primary" size="sm">Small</button>
+      <button type="button" base-button color="primary" size="lg">Large</button>
+    </div>
+    <div class="flex flex-wrap items-center gap-2">
+      <button type="button" base-icon-button color="primary" aria-label="Add">
+        <base-icon name="plus"></base-icon>
+      </button>
+      <button type="button" base-stroked-icon-button color="default" aria-label="Settings">
+        <base-icon name="settings"></base-icon>
+      </button>
+      <button type="button" base-button color="primary">
+        <base-icon name="user-plus" class="w-4 h-4"></base-icon>
+        With icon
+      </button>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="button-group"
+    title="Button group"
+    description="Toggle between views."
+    componentName="base-button-group">
+    <base-button-group size="sm" [(ngModel)]="viewMode">
+      <base-group-button-item value="list" icon="list"></base-group-button-item>
+      <base-group-button-item value="grid" icon="grid"></base-group-button-item>
+      <base-group-button-item value="layout" icon="layout"></base-group-button-item>
+    </base-button-group>
+    <p class="text-xs text-slate-500">Selected: {{ viewMode }}</p>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="badges-chips"
+    title="Badges & chips"
+    componentName="base-badge / base-chip">
+    <div class="flex flex-wrap gap-2">
+      <base-badge color="primary" size="sm" shape="rectangular">Primary</base-badge>
+      <base-badge color="success" size="sm" shape="rectangular">Success</base-badge>
+      <base-badge color="danger" size="sm" shape="rectangular">Danger</base-badge>
+      <base-badge color="warning" size="sm" shape="rectangular">Warning</base-badge>
+      <base-badge color="accent" size="sm" shape="rectangular">Accent</base-badge>
+    </div>
+    <div class="flex flex-wrap gap-2">
+      <base-chip>Default</base-chip>
+      <base-chip color="primary" [active]="true">Active</base-chip>
+      <base-chip color="success" icon="check">Success</base-chip>
+      <base-chip color="danger" [removable]="true">Removable</base-chip>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="avatars" title="Avatars" componentName="base-avatar">
+    <div class="flex flex-wrap items-center gap-3">
+      <base-avatar size="xs" shape="circle" initials="XS"></base-avatar>
+      <base-avatar size="sm" shape="circle" initials="SM" status="active"></base-avatar>
+      <base-avatar size="md" shape="circle" initials="MD" status="inactive"></base-avatar>
+      <base-avatar size="lg" shape="circle" initials="LG"></base-avatar>
+      <base-avatar size="md" shape="square" initials="SQ"></base-avatar>
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="icons-divider"
+    title="Icons & divider"
+    componentName="base-icon / base-divider">
+    <div class="flex flex-wrap gap-4 text-slate-600 dark:text-slate-300">
+      <base-icon name="home" class="w-5 h-5"></base-icon>
+      <base-icon name="users" class="w-5 h-5"></base-icon>
+      <base-icon name="bell" class="w-5 h-5"></base-icon>
+      <base-icon name="settings" class="w-5 h-5"></base-icon>
+      <base-icon name="search" class="w-5 h-5"></base-icon>
+      <base-icon name="star" class="w-5 h-5 stroke-amber-500"></base-icon>
+    </div>
+    <base-divider></base-divider>
+    <p class="text-xs text-slate-500">Content below a divider</p>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="ripple"
+    title="Ripple"
+    description="Click the button to see the material-style ripple."
+    componentName="base-ripple">
+    <button
+      type="button"
+      base-button
+      color="primary"
+      base-ripple
+      class="relative overflow-hidden">
+      Tap for ripple
+    </button>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="reveal"
+    title="Reveal"
+    description="Scroll into view animation helper."
+    componentName="baseReveal">
+    <div
+      baseReveal
+      class="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-600 dark:border-slate-700 dark:bg-slate-800/60 dark:text-slate-300">
+      This block fades and slides in when it enters the viewport.
+    </div>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="screen-size"
+    title="Current screen size"
+    description="Breakpoint signal from CurrentScreenSizeService."
+    componentName="CurrentScreenSizeService">
+    <p class="text-sm text-slate-600 dark:text-slate-300">
+      Active breakpoint:
+      <span class="font-semibold text-slate-900 dark:text-white">{{ screen.currentScreenSize() }}</span>
+    </p>
+  </app-showcase-section>
+</app-showcase-page>

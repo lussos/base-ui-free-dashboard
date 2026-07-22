@@ -1,0 +1,103 @@
+<app-showcase-page
+  title="Navigation"
+  description="Tabs, breadcrumbs, accordion, stepper, and scroll helpers."
+  [sections]="sections">
+  <app-showcase-section sectionId="tabs" title="Tabs" componentName="base-tabs">
+    <base-tabs type="underline" [defaultTab]="0" ariaLabel="Demo tabs">
+      <base-tab label="Overview">
+        <base-tab-body>
+          <p class="mt-4 text-sm text-slate-600 dark:text-slate-300">Underline tabs for page sections.</p>
+        </base-tab-body>
+      </base-tab>
+      <base-tab label="Activity">
+        <base-tab-body>
+          <p class="mt-4 text-sm text-slate-600 dark:text-slate-300">Activity content goes here.</p>
+        </base-tab-body>
+      </base-tab>
+      <base-tab label="Billing">
+        <base-tab-body>
+          <p class="mt-4 text-sm text-slate-600 dark:text-slate-300">Billing summary placeholder.</p>
+        </base-tab-body>
+      </base-tab>
+    </base-tabs>
+
+    <base-tabs type="pills" [defaultTab]="0" class="mt-6" ariaLabel="Pill tabs">
+      <base-tab label="All"
+        ><base-tab-body><p class="mt-3 text-sm text-slate-500">All items</p></base-tab-body></base-tab
+      >
+      <base-tab label="Active"
+        ><base-tab-body><p class="mt-3 text-sm text-slate-500">Active only</p></base-tab-body></base-tab
+      >
+      <base-tab label="Archived"
+        ><base-tab-body><p class="mt-3 text-sm text-slate-500">Archived</p></base-tab-body></base-tab
+      >
+    </base-tabs>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="breadcrumb" title="Breadcrumb" componentName="base-breadcrumb">
+    <base-breadcrumb>
+      <base-breadcrumb-item label="App" link="/app/dashboard"></base-breadcrumb-item>
+      <base-breadcrumb-item label="UI" link="/app/ui/primitives"></base-breadcrumb-item>
+      <base-breadcrumb-item label="Navigation"></base-breadcrumb-item>
+    </base-breadcrumb>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="accordion" title="Accordion" componentName="base-accordion">
+    <base-accordion>
+      <base-accordion-item [isOpen]="true">
+        <base-accordion-item-header>What is included in Free?</base-accordion-item-header>
+        <base-accordion-item-body>
+          Primitives, form blocks, shells like sidenav and app-shell slots, and most interactive widgets.
+        </base-accordion-item-body>
+      </base-accordion-item>
+      <base-accordion-item>
+        <base-accordion-item-header>When should I upgrade to Pro?</base-accordion-item-header>
+        <base-accordion-item-body>
+          When you need data-table, mega-menu, tree, file-upload, or full page layouts like layout-dashboard.
+        </base-accordion-item-body>
+      </base-accordion-item>
+      <base-accordion-item>
+        <base-accordion-item-header>Can I customize the source?</base-accordion-item-header>
+        <base-accordion-item-body>
+          Yes — CLI copies components into your project so you own and edit the Tailwind source.
+        </base-accordion-item-body>
+      </base-accordion-item>
+    </base-accordion>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="stepper" title="Stepper" componentName="base-stepper">
+    <base-stepper>
+      <base-step label="Account" description="Create credentials">
+        <p class="text-sm text-slate-600 dark:text-slate-300">Step 1 content — account details.</p>
+      </base-step>
+      <base-step label="Workspace" description="Invite teammates">
+        <p class="text-sm text-slate-600 dark:text-slate-300">Step 2 content — workspace setup.</p>
+      </base-step>
+      <base-step label="Finish" description="Confirm & launch">
+        <p class="text-sm text-slate-600 dark:text-slate-300">Step 3 content — review and submit.</p>
+      </base-step>
+    </base-stepper>
+  </app-showcase-section>
+
+  <app-showcase-section sectionId="scroll-to" title="Scroll to" componentName="baseScrollTo">
+    <button type="button" base-button color="primary" baseScrollTo="scroll-buttons">
+      Jump to scroll buttons
+    </button>
+  </app-showcase-section>
+
+  <app-showcase-section
+    sectionId="scroll-buttons"
+    title="Scroll buttons"
+    description="Absolute FAB variants inside this card (threshold lowered for the demo)."
+    componentName="base-scroll-top / base-scroll-bottom">
+    <div class="relative h-40 overflow-y-auto rounded-xl border border-slate-200 dark:border-slate-700">
+      <div class="space-y-3 p-4 text-sm text-slate-600 dark:text-slate-300">
+        @for (n of [1, 2, 3, 4, 5, 6, 7, 8]; track n) {
+          <p>Scrollable demo content line {{ n }}.</p>
+        }
+      </div>
+      <base-scroll-top [fixed]="false" [threshold]="40" position="bottom-right"></base-scroll-top>
+      <base-scroll-bottom [fixed]="false" [threshold]="40" position="bottom-left"></base-scroll-bottom>
+    </div>
+  </app-showcase-section>
+</app-showcase-page>

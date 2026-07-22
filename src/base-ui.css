@@ -1,0 +1,44 @@
+/* Base UI global styles — https://base-ui.net */
+
+/* Overlay positioning for dialogs, dropdowns and tooltips (Angular CDK). */
+@import '@angular/cdk/overlay-prebuilt.css';
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease-out forwards;
+}
+
+/* Chrome autofill fix for dark mode */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #334155 !important; /* slate-700 */
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #ffffff;
+}
+
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover,
+.dark input:-webkit-autofill:focus,
+.dark input:-webkit-autofill:active {
+  -webkit-text-fill-color: #e2e8f0 !important; /* slate-200 */
+  -webkit-box-shadow: 0 0 0px 1000px #1e293b inset !important; /* slate-800 */
+}
+
+/* Hide the datalist arrow in Chrome */
+input::-webkit-calendar-picker-indicator {
+  display: none !important;
+}

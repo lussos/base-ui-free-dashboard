@@ -1,0 +1,33 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+@if (showMobileBar()) {
+  <div [class]="mobileBarClass()">
+    <button
+      base-stroked-icon-button
+      (click)="openNavBar()"
+      size="sm"
+      aria-label="Toggle Navigation"
+      class="mr-3"
+      [color]="navBarOpen() ? 'accent' : (color() || 'primary')">
+      <base-icon [name]="navBarOpen() ? 'close' : 'more'"></base-icon>
+    </button>
+    <base-breadcrumb>
+      @if (parentLabel()) {
+        <base-breadcrumb-item [label]="parentLabel()!"></base-breadcrumb-item>
+      }
+      <base-breadcrumb-item [label]="selectedLabel()"></base-breadcrumb-item>
+    </base-breadcrumb>
+  </div>
+}
+<div class="relative flex h-full w-full flex-1 overflow-hidden">
+  <div [class]="navRailClass()" (click)="onNavClick()">
+    <ng-content select="base-sidenav-nav"></ng-content>
+  </div>
+
+  <div [class]="bodyClass()">
+    <ng-content select="base-sidenav-body"></ng-content>
+  </div>
+</div>

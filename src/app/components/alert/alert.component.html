@@ -1,0 +1,23 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+@if (!isClosed()) {
+<div [class]="alertClasses()">
+  <div class="flex gap-4 items-start">
+    @if (icon()) {
+    <base-icon [name]="icon() || ''" [class]="iconClasses()"></base-icon>
+    }
+    <div class="flex-1 mt-0.5">
+      <ng-content></ng-content>
+    </div>
+    @if (close()) {
+    <button type="button" [class]="closeButtonClasses()" (click)="handleClose()" aria-label="Close alert">
+      <base-icon name="close" [class]="closeIconClasses()"></base-icon>
+    </button>
+    }
+  </div>
+  <ng-content select="base-alert-actions"></ng-content>
+</div>
+}

@@ -1,0 +1,101 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<base-card>
+          <base-tabs type="underline" class="block pt-3">
+            <base-tab>
+              <base-tab-label class="p-4">Sign Up</base-tab-label>
+              <base-tab-body>
+                <div class="flex flex-col gap-4 p-6">
+                  <base-input-group>
+                    <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Name</base-label>
+                    <input base-input placeholder="Name" />
+                  </base-input-group>
+                  <base-input-group>
+                    <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Lastname</base-label>
+                    <input base-input placeholder="Lastname" />
+                  </base-input-group>
+
+                  <base-input-group>
+                    <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Phone</base-label>
+                    <input base-input placeholder="Phone" />
+                  </base-input-group>
+                  <base-input-group>
+                    <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Email</base-label>
+                    <input base-input placeholder="Email" />
+                  </base-input-group>
+                  <base-input-group>
+                    <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Password</base-label>
+                    <input base-input type="password" placeholder="Password" />
+                  </base-input-group>
+                  <base-input-group>
+                    <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Confirm
+                      Password</base-label>
+                    <input base-input type="password" placeholder="Confirm Password" />
+                  </base-input-group>
+                </div>
+                <div class="flex flex-col gap-6 px-6">
+                  <base-checkbox class="text-xs text-slate-500 whitespace-nowrap">I accept the
+                    <a base-link href="#">Terms and Conditions</a>
+                  </base-checkbox>
+                  <button base-button color="primary">Sign Up</button>
+                </div>
+                <div class="flex flex-col items-center mt-auto p-6 pb-10">
+                  <p class="text-sm uppercase font-light text-slate-400 mb-4">Or sign in with</p>
+                  <div class="flex gap-4">
+                    <button base-stroked-icon-button class="!rounded-full">
+                      <base-icon name="facebook"></base-icon>
+                    </button>
+                    <button base-stroked-icon-button class="!rounded-full">
+                      <base-icon name="linkedin"></base-icon>
+                    </button>
+                    <button base-stroked-icon-button class="!rounded-full">
+                      <base-icon name="x-twitter"></base-icon>
+                    </button>
+                  </div>
+                </div>
+              </base-tab-body>
+            </base-tab>
+            <base-tab>
+              <base-tab-label>Login</base-tab-label>
+              <base-tab-body>
+                <div class="p-6 max-w-[400px] mx-auto">
+                  <base-input-group class="mb-4">
+                    <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Login</base-label>
+                    <input base-input placeholder="Login" />
+                  </base-input-group>
+                  <base-input-group class="mb-4">
+                    <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Password</base-label>
+                    <input base-input type="password" placeholder="Password" />
+                    <button base-addon-end class="px-3 text-slate-400"><base-icon name="eye"
+                        class="w-4 h-4"></base-icon></button>
+                  </base-input-group>
+
+                  <div class="flex items-center justify-between my-8">
+                    <base-checkbox class="text-xs text-slate-500">Remember me</base-checkbox>
+                    <a href="#" class="text-xs font-bold text-slate-900 dark:text-white">Forgot password?</a>
+                  </div>
+
+                  <button base-button color="primary" class="w-full mb-8">Sign In</button>
+
+                  <div class="flex flex-col items-center mt-auto">
+                    <p class="!text-[10px] uppercase !font-light mb-6 dark:text-slate-300">Or sign in with</p>
+                    <div class="flex gap-4">
+                      <button base-stroked-icon-button color="transparent">
+                        <base-icon name="facebook" class="w-4 h-4"></base-icon>
+                      </button>
+                      <button base-stroked-icon-button color="transparent">
+                        <base-icon name="linkedin" class="w-4 h-4"></base-icon>
+                      </button>
+                      <button base-stroked-icon-button color="transparent">
+                        <base-icon name="x-twitter" class="w-4 h-4"></base-icon>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </base-tab-body>
+            </base-tab>
+          </base-tabs>
+        </base-card>

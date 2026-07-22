@@ -1,0 +1,74 @@
+<!--
+  Base UI (free tier) — https://base-ui.net
+  Free to use in unlimited projects. Do not redistribute this source as a library, kit, or template collection.
+  Full license terms: https://github.com/lussos/base-theme/blob/main/LICENSE.md
+-->
+<base-card class="mb-8">
+        <div class="flex justify-between items-center px-6 py-4 border-b border-slate-100 dark:border-slate-800">
+          <h3 class="font-bold text-sm text-slate-900 dark:text-white uppercase tracking-widest">Notifications
+          </h3>
+          <button><base-icon name="more" class="w-4 h-4 text-slate-400"></base-icon></button>
+        </div>
+        <base-card-body class="p-6 flex flex-col flex-1">
+          <div class="space-y-4 mb-8">
+            <p class="!text-[10px] uppercase !font-light !tracking-[2px] text-slate-400 mb-2">Activity notifications
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900 dark:text-white">Someone mentions me in any way</span>
+              <base-toggle [checked]="true"></base-toggle>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900 dark:text-white">Someone follows me</span>
+              <base-toggle></base-toggle>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-900 dark:text-white">Any other activity</span>
+              <base-toggle></base-toggle>
+            </div>
+          </div>
+
+          <div class="space-y-4 mb-8 pt-6 border-t border-slate-100 dark:border-slate-800">
+            <p class="!text-[10px] uppercase !font-light !tracking-[2px] text-slate-400 mb-2">Marketing</p>
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-xs font-bold text-slate-900 dark:text-white">Weekly Product</p>
+                <p class="text-[10px] text-slate-400 mt-1">Stay up to date with our weekly products.</p>
+              </div>
+              <base-toggle [checked]="true"></base-toggle>
+            </div>
+            <div class="flex items-center justify-between mt-4">
+              <div>
+                <p class="text-xs font-bold text-slate-900 dark:text-white">Newsletter</p>
+                <p class="text-[10px] text-slate-400 mt-1">Occasional updates about what's new.</p>
+              </div>
+              <base-toggle></base-toggle>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-100 dark:border-slate-800 mt-auto">
+            <p class="!text-[10px] uppercase !font-light !tracking-[2px] text-slate-400 mb-4">Add more contacts</p>
+            <div class="bg-slate-50 dark:bg-slate-800/50 p-4 rounded-[12px]">
+              <div class="flex gap-4 mb-4">
+                <base-input-group class="flex-1">
+                  <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Cardholder
+                    Name</base-label>
+                  <input base-input placeholder="Full name" />
+                </base-input-group>
+                <base-input-group class="flex-1">
+                  <base-label class="!text-[10px] uppercase !font-light !tracking-[2px]">Email</base-label>
+                  <input base-input placeholder="Email" />
+                  <base-icon base-addon-end name="check-circle" class="w-4 h-4 stroke-green-500"></base-icon>
+                </base-input-group>
+              </div>
+              <div class="flex items-center gap-2 mb-6">
+                <input type="radio" checked class="w-4 h-4 accent-slate-900">
+                <span class="text-xs font-bold text-slate-900 dark:text-white">Add to contacts</span>
+              </div>
+              <div class="flex gap-4">
+                <button base-button color="primary" class="flex-1">Add</button>
+                <button base-stroked-button class="flex-1">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </base-card-body>
+      </base-card>
