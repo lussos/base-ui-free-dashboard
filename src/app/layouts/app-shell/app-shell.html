@@ -82,6 +82,17 @@
             <input base-input type="search" placeholder="Search…" aria-label="Search" />
           </base-input-group>
 
+          <a
+            [href]="githubRepoUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex h-7 items-center gap-1.5 rounded-lg border border-slate-300 px-2 text-xs font-medium text-slate-700 transition-colors hover:border-slate-400 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-200 dark:hover:border-slate-500 dark:hover:bg-slate-800 sm:px-2.5"
+            aria-label="View source on GitHub">
+            <base-icon name="github" class="h-3.5 w-3.5 shrink-0"></base-icon>
+            <span class="hidden sm:inline">GitHub</span>
+            <base-icon name="external-link" class="hidden h-3 w-3 shrink-0 opacity-50 sm:inline"></base-icon>
+          </a>
+
           <button
             type="button"
             base-stroked-icon-button

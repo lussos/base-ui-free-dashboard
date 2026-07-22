@@ -63,6 +63,8 @@ export class AppShell {
   protected readonly theme = inject(ThemeService);
   protected readonly sidebar = inject(SidebarService);
 
+  protected readonly githubRepoUrl = 'https://github.com/lussos/base-ui-free-dashboard';
+
   protected readonly appNav: NavItem[] = [
     { path: '/app/dashboard', label: 'Home', icon: 'home', title: 'Dashboard' },
     { path: '/app/users', label: 'Users', icon: 'users', badge: '3', title: 'Users' },
