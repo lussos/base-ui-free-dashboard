@@ -6,7 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "npm run build && wrangler pages deploy dist/base-ui-free-dashboard/browser --project-name=base-ui-free-dashboard",
+    "deploy:preview": "npm run build && wrangler pages deploy dist/base-ui-free-dashboard/browser --project-name=base-ui-free-dashboard --branch=preview"
+  },
+  "engines": {
+    "node": ">=22"
   },
   "private": true,
   "packageManager": "npm@11.12.1",

@@ -50,10 +50,56 @@ Open [http://localhost:4200](http://localhost:4200).
 ### Other scripts
 
 ```bash
-npm run build    # production build → dist/
-npm run watch    # rebuild on change
-npm test         # unit tests
+npm run build           # production build → dist/base-ui-free-dashboard/browser
+npm run watch           # rebuild on change
+npm test                # unit tests
+npm run deploy          # build + deploy to Cloudflare Pages (requires wrangler login)
 ```
+
+---
+
+## Deploy (Cloudflare Pages)
+
+The demo is set up for [Cloudflare Pages](https://pages.cloudflare.com/) with SPA routing (`public/_redirects`).
+
+### Option A — Connect the GitHub repo (recommended)
+
+1. In [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
+2. Select `lussos/base-ui-free-dashboard`.
+3. Build settings:
+
+| Setting | Value |
+| --- | --- |
+| Framework preset | None |
+| Build command | `npm run build` |
+| Build output directory | `dist/base-ui-free-dashboard/browser` |
+| Root directory | `/` (default) |
+| Environment variable | `NODE_VERSION` = `22` |
+
+4. Deploy. Cloudflare will rebuild on every push to `main`.
+5. Optional: attach a custom domain under the project’s **Custom domains** tab.
+
+After the first deploy you get a URL like `https://base-ui-free-dashboard.pages.dev`.
+
+### Option B — GitHub Actions
+
+A workflow is included at `.github/workflows/deploy-cloudflare.yml`.
+
+1. Create a Cloudflare API token with **Account → Cloudflare Pages → Edit**.
+2. In the GitHub repo → **Settings → Secrets and variables → Actions**, add:
+   - `CLOUDFLARE_API_TOKEN`
+   - `CLOUDFLARE_ACCOUNT_ID` (from the Workers & Pages overview sidebar)
+3. Create the Pages project once (Option A, or `npx wrangler pages project create base-ui-free-dashboard`).
+4. Push to `main` (or run the workflow manually).
+
+### Option C — Deploy from your machine
+
+```bash
+npx wrangler login
+npm run deploy
+```
+
+Config lives in `wrangler.toml` (`pages_build_output_dir` points at the Angular browser output).
 
 ---
 
