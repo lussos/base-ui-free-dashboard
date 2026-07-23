@@ -1,0 +1,71 @@
+# Base UI Free Dashboard
+
+> Free Angular 22 + Tailwind CSS 4 admin dashboard template powered by Base UI free-tier components. Use it as a SaaS starter or as a live gallery of free Base UI widgets.
+
+Site: https://base-ui-free-dashboard-demo.pages.dev/
+Source: https://github.com/lussos/base-ui-free-dashboard
+Product docs: https://base-ui.net
+Pricing: https://base-ui.net/pricing
+
+## Summary
+
+Base UI Free Dashboard is an open-source demo and starter template. It shows how to build an authenticated admin shell with the free Base UI component set (copied into the repo via `base-ui-cli`). Auth is mocked with `localStorage` — there is no backend.
+
+Demo login: `demo@base-ui.net` / `password` (any credentials work).
+
+## Stack
+
+- Angular 22 (standalone components)
+- Tailwind CSS 4
+- Base UI free tier (`base-ui-cli`)
+- Deployed on Cloudflare Pages
+
+## Key features
+
+- Mock auth: login, register, forgot password
+- Free `base-app-shell` with sidebar + topbar
+- Pages: dashboard metrics, users CRUD, settings (in-page `base-sidenav`)
+- Component gallery: primitives, forms, feedback, overlays, navigation, data display, form blocks
+- GitHub Actions → Cloudflare Pages deploy
+
+## Important URLs
+
+- [Live demo](https://base-ui-free-dashboard-demo.pages.dev/)
+- [Sign in](https://base-ui-free-dashboard-demo.pages.dev/login)
+- [GitHub repository](https://github.com/lussos/base-ui-free-dashboard)
+- [Open Graph image](https://base-ui-free-dashboard-demo.pages.dev/og-image.png)
+- [Sitemap](https://base-ui-free-dashboard-demo.pages.dev/sitemap.xml)
+- [robots.txt](https://base-ui-free-dashboard-demo.pages.dev/robots.txt)
+
+## App routes (demo)
+
+- `/login` — sign in
+- `/register` — create account (mocked)
+- `/forgot-password` — reset request (mocked)
+- `/app/dashboard` — overview metrics
+- `/app/users` — users table + dialogs
+- `/app/settings` — profile / billing / notifications
+- `/app/ui/primitives` — buttons, badges, avatars, icons
+- `/app/ui/forms` — inputs, select, OTP, sliders, rating
+- `/app/ui/feedback` — alerts, toasts, progress, skeletons
+- `/app/ui/overlays` — dialog, dropdown, drawer, tooltip
+- `/app/ui/navigation` — tabs, accordion, stepper, breadcrumb
+- `/app/ui/data-display` — cards, calendar, carousel, timeline
+- `/app/ui/form-blocks` — all 19 free form blocks
+
+## Architecture notes for assistants
+
+- Import Base UI from the path alias `Base` → `src/app/components/index.ts`.
+- Components exported from the `Base` barrel must use relative imports (not `from 'Base'`) to avoid Angular circular dependency `NG0919`.
+- Do not use `base-sidenav` as the primary app chrome; use free `base-app-shell` (`layout-app-shell`) + `SidebarService`.
+- Build output: `dist/base-ui-free-dashboard/browser`
+- Node.js 22+ required
+
+## License
+
+Dashboard template code is free to use in projects. Base UI free-tier component source is free for unlimited projects; Pro components require a license. Do not redistribute fetched component source as a standalone library or kit.
+
+## Optional
+
+- [Shells vs sidenav](https://github.com/lussos/base-ui-free-dashboard/blob/main/docs/shells-vs-sidenav.md)
+- [README](https://github.com/lussos/base-ui-free-dashboard/blob/main/README.md)

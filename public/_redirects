@@ -1,2 +1,8 @@
+# Keep crawler / AI discovery files as static assets
+/robots.txt   /robots.txt   200
+/sitemap.xml  /sitemap.xml  200
+/llms.txt     /llms.txt     200
+/og-image.png /og-image.png 200
+
 # SPA fallback — serve index.html for client-side Angular routes
 /*    /index.html   200
